@@ -18,15 +18,7 @@ export default function Home() {
           <div className="px-6 py-2 rounded-xl bg-dark-grey">Buy now</div>
         </section>
         <section className="h-screen w-full relative text-white">
-          <video
-            src="https://res.cloudinary.com/ddh8nxew6/video/upload/v1734240685/videos/OPods.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"
-          ></video>
+          <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
           <div className="px-48 pt-[70vh] relative z-10 flex justify-between">
             <div className="w-80">
               <p className="text-4xl font-bold">OPods</p>

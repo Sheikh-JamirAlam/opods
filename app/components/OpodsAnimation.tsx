@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll, useTransform, useSpring } from "motion/react";
+import { useMotionValueEvent, useScroll, useSpring } from "motion/react";
 import { useRef, useState } from "react";
 
 export default function ScrollVideo() {
@@ -13,12 +13,9 @@ export default function ScrollVideo() {
   });
 
   const smoothVideoProgress = useSpring(scrollYProgress, {
-    stiffness: 200, // Adjust for faster/slower response
-    damping: 25, // Reduce oscillation
-    // mass: 1, // Adjust for more weight (smoother easing)
+    stiffness: 180,
+    damping: 25,
   });
-
-  // const videoProgress = useTransform(smoothVideoProgress, [0, 1], [0, 1]);
 
   const [lastProgress, setLastProgress] = useState(0);
 
@@ -28,9 +25,8 @@ export default function ScrollVideo() {
 
     const progress = smoothVideoProgress.get();
     const targetTime = progress * video.duration;
-    console.log(targetTime);
 
-    if (Math.abs(progress - lastProgress) > 0.001) {
+    if (Math.abs(progress - lastProgress) > 0.002) {
       video.currentTime = targetTime;
       setLastProgress(latest);
     }
@@ -39,15 +35,7 @@ export default function ScrollVideo() {
   return (
     <div className="h-[300vh] relative" ref={scrollRef}>
       <div className="h-screen sticky flex justify-center items-center top-0">
-        <motion.video
-          transition={{ delay: 1, ease: "linear" }}
-          className="w-[40rem] h-auto"
-          ref={videoRef}
-          src="https://res.cloudinary.com/ddh8nxew6/video/upload/v1734240683/videos/Features.mp4"
-          muted
-          playsInline
-          preload="auto"
-        ></motion.video>
+        <video className="w-[40rem] h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
       </div>
     </div>
   );
