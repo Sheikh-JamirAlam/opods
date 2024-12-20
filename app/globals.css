@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-* {
+body {
   scroll-behavior: smooth;
 }
 

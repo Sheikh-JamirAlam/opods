@@ -9,7 +9,7 @@ export default function ScrollVideo() {
 
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start start", "end end"],
+    offset: ["start end", "end end"],
   });
 
   const smoothVideoProgress = useSpring(scrollYProgress, {
@@ -35,7 +35,11 @@ export default function ScrollVideo() {
   return (
     <div className="h-[300vh] relative" ref={scrollRef}>
       <div className="h-screen sticky flex justify-center items-center top-0">
-        <video className="w-[40rem] h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
+        <div className="w-96 absolute top-24 left-48  text-2xl flex flex-col gap-5">
+          <h1>OPods Z1</h1>
+          <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
+        </div>
+        <video className="w-[65rem] h-auto" ref={videoRef} src="/videos/Features1.mp4" muted playsInline></video>
       </div>
     </div>
   );
