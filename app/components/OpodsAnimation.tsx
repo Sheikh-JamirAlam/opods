@@ -39,7 +39,7 @@ export default function ScrollVideo() {
           <h1>OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>
-        <video className="w-[65rem] h-auto" ref={videoRef} src="/videos/Features1.mp4" muted playsInline></video>
+        <video className="w-[65rem] h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
       </div>
     </div>
   );
