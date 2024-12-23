@@ -14,7 +14,11 @@ export default {
         black: "#080808",
         "dark-grey": "#212121",
         grey: "#6f6f74",
+        "light-grey": "#9e9e9e",
         green: "#38B53D",
+      },
+      boxShadow: {
+        "inner-3xl": "inset 0px -206px 70px -25px rgba(0, 0, 0, 0.25)",
       },
     },
   },

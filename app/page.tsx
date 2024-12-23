@@ -1,5 +1,6 @@
 import { Arrow } from "./components/Icons";
 import OpodsAnimation from "./components/OpodsAnimation";
+import CarouselContainer from "./components/CarouselContainer";
 
 export default function Home() {
   return (
@@ -28,6 +29,12 @@ export default function Home() {
         </section>
         <section className="bg-white">
           <OpodsAnimation />
+        </section>
+        <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }} className="h-screen">
+          <div className="px-48 py-24 text-white flex flex-col gap-20">
+            <h1 className="text-5xl font-medium">Premium Features</h1>
+            <CarouselContainer />
+          </div>
         </section>
       </main>
       <footer className=""></footer>
