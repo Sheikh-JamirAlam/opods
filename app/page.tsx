@@ -1,8 +1,5 @@
-//import Image from "next/image";
 import { Arrow } from "./components/Icons";
-//import dynamic from "next/dynamic";
 import OpodsAnimation from "./components/OpodsAnimation";
-//const OpodsAnimation = dynamic(() => import("./components/OpodsAnimation"));
 
 export default function Home() {
   return (
