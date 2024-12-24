@@ -1,6 +1,7 @@
 import { Arrow } from "./components/Icons";
 import OpodsAnimation from "./components/OpodsAnimation";
 import CarouselContainer from "./components/CarouselContainer";
+import ColorContainer from "./components/ColorContainer";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
             <h1 className="text-5xl font-medium">Premium Features</h1>
             <CarouselContainer />
           </div>
+        </section>
+        <section className="h-screen">
+          <ColorContainer />
         </section>
       </main>
       <footer className=""></footer>

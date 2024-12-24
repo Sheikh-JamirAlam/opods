@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-outfit)"],
+        calligraphy: ["var(--font-yellowtail)"],
       },
       colors: {
         background: "var(--background)",

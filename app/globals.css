@@ -14,3 +14,10 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+.gredient-text {
+  background: -webkit-linear-gradient(#363636, rgba(135, 135, 135, 0.3));
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

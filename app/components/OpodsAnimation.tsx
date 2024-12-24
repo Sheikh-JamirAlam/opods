@@ -28,7 +28,6 @@ export default function ScrollVideo() {
     if (!video || !video.duration) return;
 
     const progress = smoothVideoProgress.get();
-    console.log(smoothVideoProgress.get());
     const targetTime = progress * video.duration;
 
     if (Math.abs(progress - lastProgress) > 0.002) {
