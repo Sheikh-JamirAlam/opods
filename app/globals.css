@@ -16,8 +16,35 @@ body {
 }
 
 .gredient-text {
+  -webkit-text-fill-color: transparent;
+}
+
+.gredient-text-black {
   background: -webkit-linear-gradient(#363636, rgba(135, 135, 135, 0.3));
   background-clip: none;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+.gredient-text-blue {
+  background: -webkit-linear-gradient(#5e8ca9, rgba(167, 209, 235, 0.3));
+  background-clip: none;
+  -webkit-background-clip: text;
+}
+
+.gredient-text-white {
+  background: -webkit-linear-gradient(#b0b0b0, rgba(242, 242, 242, 0.3));
+  background-clip: none;
+  -webkit-background-clip: text;
+}
+
+.gredient-text-purple {
+  background: -webkit-linear-gradient(#61518e, rgba(214, 203, 245, 0.3));
+  background-clip: none;
+  -webkit-background-clip: text;
+}
+
+.gredient-text-red {
+  background: -webkit-linear-gradient(#ba4141, rgba(250, 127, 127, 0.3));
+  background-clip: none;
+  -webkit-background-clip: text;
 }
