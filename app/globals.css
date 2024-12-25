@@ -48,3 +48,34 @@ body {
   background-clip: none;
   -webkit-background-clip: text;
 }
+
+.image-overlay {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  pointer-events: none;
+  z-index: 11;
+  mix-blend-mode: screen;
+  -webkit-mask-image: url("/images/OPods.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: url("/images/OPods.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+.image-overlay.blue {
+  background: rgba(117, 161, 189, 0.7);
+}
+
+.image-overlay.white {
+  background: rgba(250, 250, 250, 0.6);
+}
+
+.image-overlay.purple {
+  background: rgba(50, 31, 100, 0.7);
+}
+
+.image-overlay.red {
+  background: rgba(243, 0, 0, 0.7);
+}

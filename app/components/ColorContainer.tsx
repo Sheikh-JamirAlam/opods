@@ -22,14 +22,19 @@ export default function ColorContainer() {
               ? "gredient-text-white"
               : color === "Purple"
               ? "gredient-text-purple"
-              : "gredient-text-red"
+              : "gredient-text-red -translate-x-10"
           } w-full text-center font-calligraphy text-[500px] absolute z-0`}
         >
           {color}
         </h1>
-        <Image className="relative z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
+        <div className={`image-overlay ${color.toLowerCase()} transition-all`}></div>
+        <Image className="block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
       </div>
-      <p className="mx-auto text-2xl font-medium">
+      <p
+        className={`mx-auto text-2xl font-medium transition-all ${
+          color === "Black" ? "text-foreground" : color === "Blue" ? "text-teal" : color === "White" ? "text-grey" : color === "Purple" ? "text-purple" : "text-red"
+        }`}
+      >
         {color === "Black"
           ? "Midnight Black - Bold and Timeless"
           : color === "Blue"
