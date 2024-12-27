@@ -4,6 +4,8 @@ import CarouselContainer from "./components/CarouselContainer";
 import CaseContainer from "./components/CaseContainer";
 import ColorContainer from "./components/ColorContainer";
 import Carousel from "./components/Carousel";
+import Feature from "./components/Feature";
+import AnimateFeature from "./components/AnimateFeature";
 
 export default function Home() {
   return (
@@ -42,7 +44,7 @@ export default function Home() {
         <section className="h-screen">
           <ColorContainer />
         </section>
-        <section className="px-48 pb-12 flex flex-col items-center gap-12">
+        <section className="px-48 pb-52 flex flex-col items-center gap-12">
           <div className="w-full h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
           <h1 className="w-[40rem] mt-56 text-center text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
           <CaseContainer />
@@ -54,6 +56,28 @@ export default function Home() {
             <Carousel imgUrl="url('/images/Cord.jpg')" imgText="Easy as USB-C" width="26rem" height="26rem" />
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" />
           </div>
+        </section>
+        <section className="px-48 py-12 flex justify-between">
+          <div className="w-[33rem] h-[96.625rem] relative">
+            <div className="flex flex-col gap-5 sticky top-36">
+              <h1 className="text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
+              <p className="text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-32">
+            <Feature
+              imgUrl="url(/images/Fitness.png)"
+              imgText="Physical fit-ness."
+              desc="The new internal architecture and a refined contour provide a natural and secure fit for more people than ever."
+              txtSide="left"
+            />
+            <AnimateFeature imgUrl="url(/images/Controls.png)" imgText="Touch control." desc="The new force sensor lets you control playback and calls with just a pinch." txtSide="right" />
+            <Feature imgUrl="url(/images/Resist.png)" imgText="Resist Ready." desc="Rated IP54 dust, sweat and water resistant to withstand anything from rain to heavy workouts." txtSide="right" />
+          </div>
+        </section>
+        <section className="">
+          <div className="w-full h-[41rem] absolute bg-gradient-to-b from-aqua from-45%"></div>
+          <h1 className="w-[40rem] mt-56 text-center text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
         </section>
       </main>
       <footer className=""></footer>
