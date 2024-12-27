@@ -8,7 +8,7 @@ export default function ColorContainer() {
 
   return (
     <div className="px-48 py-12 flex flex-col justify-center items-center gap-14">
-      <div className="w-full">
+      <div className="w-full pt-12">
         <h1 className="w-[40rem] text-5xl font-semibold">Choose from a wide range of stunning colors</h1>
       </div>
       <div className="flex items-center justify-center">

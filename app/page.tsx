@@ -1,4 +1,4 @@
-import { Arrow, CreditCard, Send, SmartPhone, Smiley, Truck } from "./components/Icons";
+import { CreditCard, Send, SmartPhone, Smiley, Truck } from "./components/Icons";
 import OpodsAnimation from "./components/OpodsAnimation";
 import CarouselContainer from "./components/CarouselContainer";
 import CaseContainer from "./components/CaseContainer";
@@ -8,19 +8,20 @@ import Feature from "./components/Feature";
 import AnimateFeature from "./components/AnimateFeature";
 import ScreenContainer from "./components/ScreenContainer";
 import ShopCard from "./components/ShopCard";
+import VideoArrow from "./components/VideoArrow";
 
 export default function Home() {
   return (
     <div className="font-sans">
-      <main className="">
+      <main>
         <section className="w-full bg-transparent px-48 py-6 flex justify-between items-center text-white absolute top-0 z-50">
-          <div className="text-3xl font-bold">OPods</div>
+          <div className="text-3xl font-bold cursor-pointer">OPods</div>
           <div className="w-80 flex justify-between items-center font-semibold">
-            <p>Overview</p>
-            <p>Specs</p>
-            <p>Compare</p>
+            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Overview</p>
+            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Specs</p>
+            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Compare</p>
           </div>
-          <div className="px-6 py-2 rounded-xl bg-light-black">Buy now</div>
+          <div className="px-6 py-2 rounded-xl bg-light-black cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
         </section>
         <section className="h-screen w-full relative text-white">
           <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
@@ -29,12 +30,10 @@ export default function Home() {
               <p className="text-4xl font-bold">OPods</p>
               <p className="text-5xl font-semibold">Next evolution of sound and comfort</p>
             </div>
-            <div className="w-12 h-12 mt-auto flex justify-center items-center text-xl bg-light-black rounded-full">
-              <Arrow className="rotate-180" />
-            </div>
+            <VideoArrow />
           </div>
         </section>
-        <section className="bg-white">
+        <section id="opods-animation-section" className="bg-white">
           <OpodsAnimation />
         </section>
         <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }} className="h-screen">
@@ -100,38 +99,38 @@ export default function Home() {
         <div className="py-20 flex gap-20">
           <div className="flex flex-col gap-5">
             <h1 className="pb-2 text-xl text-grey">Explore OPods</h1>
-            <p className="text-4xl font-medium">Explore All OPods</p>
-            <p className="text-4xl font-medium">OPods X1</p>
-            <p className="text-4xl font-medium">OPods X2 Pro</p>
-            <p className="text-4xl font-medium">OPods Max</p>
+            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">Explore All OPods</p>
+            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X1</p>
+            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X2 Pro</p>
+            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods Max</p>
           </div>
           <div className="flex flex-col gap-5">
             <h1 className="pb-2 text-xl text-grey">Shop OPods</h1>
-            <p className="text-xl font-medium">Shop OPods</p>
-            <p className="text-xl font-medium">OPods Accessories</p>
+            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">Shop OPods</p>
+            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Accessories</p>
           </div>
           <div className="flex flex-col gap-5">
             <h1 className="pb-2 text-xl text-grey">More from OPods</h1>
-            <p className="text-xl font-medium">OPods Support</p>
-            <p className="text-xl font-medium">OCare+ for Headphones</p>
+            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Support</p>
+            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OCare+ for Headphones</p>
           </div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex gap-10">
             <p className="text-grey">Copyright © 2024 Apple Inc. All rights reserved.</p>
-            <p>Privacy Policy</p>
-            <p>Terms and Conditions</p>
+            <p className="link link-underline link-underline-black cursor-pointer">Privacy Policy</p>
+            <p className="link link-underline link-underline-black cursor-pointer">Terms and Conditions</p>
           </div>
           <div className="flex gap-10">
-            <div className="flex justify-center items-center gap-2">
-              <div className="w-8 h-8 text-xl bg-lighter-grey rounded-full flex justify-center items-center">
-                <SmartPhone />
+            <div className="flex justify-center items-center gap-2 group cursor-pointer">
+              <div className="w-10 h-10 text-xl bg-lighter-grey rounded-full flex justify-center items-center transition-all cursor-pointer before:absolute before:h-6 before:w-6 before:rounded-full before:bg-light-black/[0] before:duration-300 before:ease-out group-hover:before:bg-light-black group-hover:before:h-10 group-hover:before:w-10">
+                <SmartPhone className="z-10 transition-all group-hover:text-white" />
               </div>
               <p>+91 2222222222</p>
             </div>
-            <div className="flex justify-center items-center gap-2">
-              <div className="w-8 h-8 text-xl bg-lighter-grey rounded-full flex justify-center items-center">
-                <Send />
+            <div className="flex justify-center items-center gap-2 group cursor-pointer">
+              <div className="w-10 h-10 text-xl bg-lighter-grey rounded-full flex justify-center items-center transition-all cursor-pointer before:absolute before:h-6 before:w-6 before:rounded-full before:bg-light-black/[0] before:duration-300 before:ease-out group-hover:before:bg-light-black group-hover:before:h-10 group-hover:before:w-10">
+                <Send className="z-10 transition-all group-hover:text-white" />
               </div>
               <p>opods@hello.design</p>
             </div>

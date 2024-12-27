@@ -1,3 +1,5 @@
+import { Plus } from "./Icons";
+
 interface PropType {
   imgUrl: string;
   imgText: string;
@@ -13,7 +15,9 @@ export default function Carousel(props: PropType) {
     >
       <div className="px-6 py-8 flex justify-between items-center opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
         <p className="w-60 text-3xl text-white font-medium pointer-events-none">{props.imgText}</p>
-        <div className="w-24 h-11 rounded-full font-medium bg-white text-black flex justify-center items-center cursor-pointer">More +</div>
+        <div className="w-24 h-11 rounded-full font-medium bg-white text-black flex justify-center items-center cursor-pointer group/button">
+          More <Plus className="text-lg transition-all duration-300 group-hover/button:rotate-90" />
+        </div>
       </div>
     </div>
   );

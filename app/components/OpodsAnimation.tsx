@@ -2,8 +2,10 @@
 
 import { useMotionValueEvent, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef, useState } from "react";
+import FloatingNavbar from "./FloatingNavbar";
 
 export default function ScrollVideo() {
+  const [isFloatingNavVisible, setIsFloatingNavVisible] = useState<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -34,10 +36,17 @@ export default function ScrollVideo() {
       video.currentTime = targetTime;
       setLastProgress(latest);
     }
+
+    if (latest > 0.33) {
+      setIsFloatingNavVisible(true);
+    } else {
+      setIsFloatingNavVisible(false);
+    }
   });
 
   return (
     <div className="h-[300vh] relative" ref={scrollRef}>
+      <FloatingNavbar isFloatingNavVisible={isFloatingNavVisible} />
       <div className="h-screen sticky flex justify-center items-center top-0">
         <div className="w-96 absolute top-24 left-48 text-2xl flex flex-col gap-5">
           <h1>OPods Z1</h1>

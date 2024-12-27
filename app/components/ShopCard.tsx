@@ -13,8 +13,8 @@ export default function ShopCard(props: PropType) {
       <props.Icon className="text-6xl" />
       <h1 className="text-3xl font-medium">{props.text}</h1>
       <p className="text-base text-dark-grey">{props.desc}</p>
-      <div className="w-10 h-10 ml-auto flex items-center justify-center rounded-full text-3xl text-white bg-black cursor-pointer">
-        <Plus />
+      <div className="w-10 h-10 ml-auto flex items-center justify-center rounded-full text-3xl text-white bg-black cursor-pointer group">
+        <Plus className="transition-all duration-300 group-hover:rotate-90" />
       </div>
     </div>
   );
