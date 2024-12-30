@@ -1,4 +1,4 @@
-import { CreditCard, Send, SmartPhone, Smiley, Truck } from "./components/Icons";
+import { Send, SmartPhone } from "./components/Icons";
 import OpodsAnimation from "./components/OpodsAnimation";
 import CarouselContainer from "./components/CarouselContainer";
 import CaseContainer from "./components/CaseContainer";
@@ -7,8 +7,8 @@ import Carousel from "./components/Carousel";
 import Feature from "./components/Feature";
 import AnimateFeature from "./components/AnimateFeature";
 import ScreenContainer from "./components/ScreenContainer";
-import ShopCard from "./components/ShopCard";
 import VideoArrow from "./components/VideoArrow";
+import ShopCardContainer from "./components/ShopCardContainer";
 
 export default function Home() {
   return (
@@ -86,13 +86,9 @@ export default function Home() {
             OPods Z1 pair immediately with every device connected to your Apple Account. Just place your OPods near your device and tap Connect.
           </p>
         </section>
-        <section className="px-20 xl:px-48 py-28 bg-white">
-          <h1 className="w-[35rem] pb-20 text-5xl font-semibold">Why OPods are the best place to buy OPods.</h1>
-          <div className="grid grid-cols-3 gap-12">
-            <ShopCard text="Personalise your AirPods for free." desc="Engrave your new OPods with a mix of emoji, names, initials and numbers." Icon={Smiley} />
-            <ShopCard text="Monthly payment options available." desc="Choose the easy way to finance with convenient payment options." Icon={CreditCard} />
-            <ShopCard text="Get flexible delivery and easy pickup." desc="Get free delivery or pickup at your OPods Store." Icon={Truck} />
-          </div>
+        <section className="py-28 pb-16 bg-white">
+          <h1 className="w-[35rem] mx-20 xl:mx-48 pb-10 text-5xl font-semibold">Why OPods are the best place to buy OPods.</h1>
+          <ShopCardContainer />
         </section>
       </main>
       <footer className="px-20 xl:px-48 py-20 pt-40">
