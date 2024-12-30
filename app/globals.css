@@ -51,8 +51,6 @@ body {
 
 .image-overlay {
   position: absolute;
-  width: 550px;
-  height: 550px;
   pointer-events: none;
   z-index: 11;
   mix-blend-mode: screen;

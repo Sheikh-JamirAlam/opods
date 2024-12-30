@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       <main>
-        <section className="w-full bg-transparent px-48 py-6 flex justify-between items-center text-white absolute top-0 z-50">
+        <section className="w-full bg-transparent px-20 xl:px-48 py-6 flex justify-between items-center text-white absolute top-0 z-50 invisible lg:visible">
           <div className="text-3xl font-bold cursor-pointer">OPods</div>
           <div className="w-80 flex justify-between items-center font-semibold">
             <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Overview</p>
@@ -23,9 +23,10 @@ export default function Home() {
           </div>
           <div className="px-6 py-2 rounded-xl bg-light-black cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
         </section>
+        {/* <section className=""></section> */}
         <section className="h-screen w-full relative text-white">
           <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
-          <div className="px-48 pt-[70vh] relative z-10 flex justify-between">
+          <div className="px-20 xl:px-48 pt-[70vh] relative z-10 flex justify-between">
             <div className="w-80">
               <p className="text-4xl font-bold">OPods</p>
               <p className="text-5xl font-semibold">Next evolution of sound and comfort</p>
@@ -36,16 +37,16 @@ export default function Home() {
         <section id="opods-animation-section" className="bg-white">
           <OpodsAnimation />
         </section>
-        <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }} className="h-screen">
-          <div className="px-48 py-24 text-white flex flex-col gap-20">
-            <h1 className="text-5xl font-medium">Premium Features</h1>
+        <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }}>
+          <div className="py-24 text-white flex flex-col gap-20">
+            <h1 className="px-20 xl:px-48 text-5xl font-medium">Premium Features</h1>
             <CarouselContainer />
           </div>
         </section>
-        <section className="h-screen">
+        <section className="overflow-hidden">
           <ColorContainer />
         </section>
-        <section className="px-48 pb-52 flex flex-col items-center gap-12">
+        <section className="px-20 xl:px-48 pb-52 flex flex-col items-center gap-12">
           <div className="w-full h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
           <h1 className="w-[40rem] mt-56 text-center text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
           <CaseContainer />
@@ -58,11 +59,11 @@ export default function Home() {
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" />
           </div>
         </section>
-        <section className="px-48 py-12 pb-24 flex justify-between">
-          <div className="w-[33rem] h-[96.625rem] relative">
-            <div className="flex flex-col gap-5 sticky top-36">
-              <h1 className="text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
-              <p className="text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
+        <section className="px-20 xl:px-48 py-12 pb-24 flex justify-between">
+          <div className="w-[36%] relative">
+            <div className="sticky top-36">
+              <h1 className="text-4xl 2xl:text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
+              <p className="mt-5 text-3xl 2xl:text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
             </div>
           </div>
           <div className="flex flex-col gap-32">
@@ -76,7 +77,7 @@ export default function Home() {
             <Feature imgUrl="url(/images/Resist.png)" imgText="Resist Ready." desc="Rated IP54 dust, sweat and water resistant to withstand anything from rain to heavy workouts." txtSide="right" />
           </div>
         </section>
-        <section className="px-48 pb-20 flex flex-col items-center">
+        <section className="px-20 xl:px-48 pb-20 flex flex-col items-center">
           <div className="w-full h-[54rem] absolute bg-gradient-to-b from-lighter-red from-[34%] via-pink via-[54%]"></div>
           <h1 className="w-[46rem] pt-[6.25rem] text-center text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
           <ScreenContainer />
@@ -85,16 +86,16 @@ export default function Home() {
             OPods Z1 pair immediately with every device connected to your Apple Account. Just place your OPods near your device and tap Connect.
           </p>
         </section>
-        <section className="px-48 py-28 bg-white">
+        <section className="px-20 xl:px-48 py-28 bg-white">
           <h1 className="w-[35rem] pb-20 text-5xl font-semibold">Why OPods are the best place to buy OPods.</h1>
-          <div className="flex justify-between">
+          <div className="grid grid-cols-3 gap-12">
             <ShopCard text="Personalise your AirPods for free." desc="Engrave your new OPods with a mix of emoji, names, initials and numbers." Icon={Smiley} />
             <ShopCard text="Monthly payment options available." desc="Choose the easy way to finance with convenient payment options." Icon={CreditCard} />
             <ShopCard text="Get flexible delivery and easy pickup." desc="Get free delivery or pickup at your OPods Store." Icon={Truck} />
           </div>
         </section>
       </main>
-      <footer className="px-48 py-20 pt-40">
+      <footer className="px-20 xl:px-48 py-20 pt-40">
         <h1 className="text-5xl font-semibold">OPods</h1>
         <div className="py-20 flex gap-20">
           <div className="flex flex-col gap-5">

@@ -9,7 +9,7 @@ export default function CarouselContainer() {
   const [animation, setAnimation] = useState<number>(0);
 
   return (
-    <div className="flex items-center justify-end">
+    <div className="px-20 xl:px-48 flex items-center justify-end overflow-hidden">
       <button
         onClick={() => {
           setAnimation(0);
