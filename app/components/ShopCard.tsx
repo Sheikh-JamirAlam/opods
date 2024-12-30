@@ -9,7 +9,7 @@ interface PropType {
 
 export default function ShopCard(props: PropType) {
   return (
-    <div className="rounded-[40px] shadow-outer-lg snap-start">
+    <div className="rounded-[40px] shadow-outer-lg snap-start cursor-default">
       <div className="w-[28rem] h-[20rem] p-10 flex flex-col gap-2 justify-between">
         <props.Icon className="text-6xl" />
         <h1 className="text-3xl font-medium">{props.text}</h1>
