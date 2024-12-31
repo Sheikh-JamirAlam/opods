@@ -81,8 +81,8 @@ export default function Home() {
           <div className="w-full h-[54rem] absolute bg-gradient-to-b from-lighter-red from-[34%] via-pink via-[54%]"></div>
           <h1 className="w-[46rem] pt-[6.25rem] text-center text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
           <ScreenContainer />
-          <p className="pt-20 text-2xl font-semibold">An instant connection.</p>
-          <p className="w-[60rem] text-2xl font-semibold text-center text-grey">
+          <p className="pt-20 text-xl xl:text-2xl font-semibold">An instant connection.</p>
+          <p className="w-[80%] xl:w-[60rem] text-xl xl:text-2xl font-semibold text-center text-grey">
             OPods Z1 pair immediately with every device connected to your Apple Account. Just place your OPods near your device and tap Connect.
           </p>
         </section>
