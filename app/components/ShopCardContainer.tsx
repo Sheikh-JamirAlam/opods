@@ -39,9 +39,9 @@ export default function ShopCardContainer() {
   const onDragEnd = () => {
     const x = dragX.get();
 
-    if (x <= -50 && animation < maxSteps) {
+    if (x <= -75 && animation < maxSteps) {
       setAnimation((pv) => pv + 1);
-    } else if (x >= 50 && animation > 0) {
+    } else if (x >= 75 && animation > 0) {
       setAnimation((pv) => pv - 1);
     }
   };
@@ -49,19 +49,11 @@ export default function ShopCardContainer() {
   return (
     <div className="flex flex-col items-start justify-center overflow-hidden">
       <motion.div
-        id="hello"
         ref={containerRef}
         drag="x"
-        dragConstraints={{
-          left: 0,
-          right: 0,
-        }}
-        style={{
-          x: dragX,
-        }}
-        animate={{
-          translateX: `-${animation * stepSize}px`,
-        }}
+        dragConstraints={{ left: 0, right: 0 }}
+        style={{ x: dragX }}
+        animate={{ translateX: `-${animation * stepSize}px` }}
         transition={{ duration: 0.5, ease: [0.39, 0.24, 0.3, 1] }}
         onDragEnd={onDragEnd}
         className="py-10 pb-12 px-20 xl:px-48 flex gap-10 cursor-grab active:cursor-grabbing"

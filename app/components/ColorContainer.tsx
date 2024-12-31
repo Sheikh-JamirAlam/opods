@@ -27,7 +27,7 @@ export default function ColorContainer() {
         >
           {color}
         </h1>
-        <div className={`w-[450px] h-[450px] 2xl:w-[550px] 2xl:h-[450px] image-overlay ${color.toLowerCase()} transition-all`}></div>
+        <div className={`w-[450px] h-[450px] 2xl:w-[550px] 2xl:h-[550px] image-overlay ${color.toLowerCase()} transition-all`}></div>
         <Image className="w-[450px] 2xl:w-[550px] block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
       </div>
       <p
