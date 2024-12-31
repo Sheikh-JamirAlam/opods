@@ -17,12 +17,13 @@ export default function ShopCardContainer() {
       if (containerRef.current) {
         const containerWidth = containerRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         const totalSteps = Math.ceil((containerWidth - viewportWidth) / 448) - 1;
         if (totalSteps > 0) {
-          setStepSize((containerWidth - viewportWidth) / totalSteps);
+          setStepSize((containerWidth - viewportWidth + scrollbarWidth) / totalSteps);
           setMaxSteps(totalSteps);
         } else {
-          setStepSize(448);
+          setStepSize(containerWidth - viewportWidth + scrollbarWidth);
           setMaxSteps(1);
         }
       }
@@ -46,27 +47,7 @@ export default function ShopCardContainer() {
   };
 
   return (
-    <div className="flex items-center justify-start overflow-hidden">
-      <button
-        onClick={() => {
-          setAnimation((pv) => pv - 1);
-        }}
-        className={`w-14 h-14 mt-auto flex justify-center items-center text-xl ${
-          animation === 0 ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute left-32 xl:left-52 z-50`}
-      >
-        <Arrow className="-rotate-90" />
-      </button>
-      <button
-        onClick={() => {
-          setAnimation((pv) => pv + 1);
-        }}
-        className={`w-14 h-14 mt-auto flex justify-center items-center text-xl ${
-          animation === maxSteps ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute right-32 xl:right-52 z-50`}
-      >
-        <Arrow className="rotate-90" />
-      </button>
+    <div className="flex flex-col items-start justify-center overflow-hidden">
       <motion.div
         id="hello"
         ref={containerRef}
@@ -90,6 +71,28 @@ export default function ShopCardContainer() {
         <ShopCard text="Get flexible delivery and easy pickup." desc="Get free delivery or pickup at your nearest OPods Store." Icon={Truck} />
         <ShopCard text="Shop with a Specialist for free." desc="Whether you shop in a store or online, our Specialists can help you pick something perfect." Icon={Truck} />
       </motion.div>
+      <div className="pb-12 px-20 xl:px-48 ml-auto flex gap-5 items-center">
+        <button
+          onClick={() => {
+            setAnimation((pv) => pv - 1);
+          }}
+          className={`w-10 h-10 mt-auto flex justify-center items-center text-xl text-grey ${
+            animation === 0 ? "opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto"
+          } bg-opacity-35 bg-light-grey hover:bg-opacity-50 hover:bg-lighter-grey transition-all rounded-full`}
+        >
+          <Arrow className="-rotate-90" />
+        </button>
+        <button
+          onClick={() => {
+            setAnimation((pv) => pv + 1);
+          }}
+          className={`w-10 h-10 mt-auto flex justify-center items-center text-xl text-grey ${
+            animation === maxSteps ? "opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto"
+          } bg-opacity-35 bg-light-grey hover:bg-opacity-50 hover:bg-lighter-grey transition-all rounded-full`}
+        >
+          <Arrow className="rotate-90" />
+        </button>
+      </div>
     </div>
   );
 }
