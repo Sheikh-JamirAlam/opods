@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue } from "motion/react";
 import ShopCard from "./ShopCard";
-import { Arrow, CreditCard, Smiley, Truck } from "./Icons";
+import { Arrow, Chat, CreditCard, Smiley, Truck } from "./Icons";
 
 export default function ShopCardContainer() {
   const [animation, setAnimation] = useState<number>(0);
@@ -61,7 +61,7 @@ export default function ShopCardContainer() {
         <ShopCard text="Personalise your AirPods for free." desc="Engrave your new OPods with a mix of emoji, names, initials and numbers." Icon={Smiley} />
         <ShopCard text="Monthly payment options available." desc="Choose the easy way to finance with convenient payment options." Icon={CreditCard} />
         <ShopCard text="Get flexible delivery and easy pickup." desc="Get free delivery or pickup at your nearest OPods Store." Icon={Truck} />
-        <ShopCard text="Shop with a Specialist for free." desc="Whether you shop in a store or online, our Specialists can help you pick something perfect." Icon={Truck} />
+        <ShopCard text="Shop with a Specialist for free." desc="Whether you shop in a store or online, our Specialists can help you pick something perfect." Icon={Chat} />
       </motion.div>
       <div className="pb-12 px-20 xl:px-48 ml-auto flex gap-5 items-center">
         <button

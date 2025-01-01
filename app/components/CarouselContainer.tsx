@@ -23,7 +23,6 @@ export default function CarouselContainer() {
           setStepSize((containerWidth - viewportWidth + scrollbarWidth) / totalSteps);
           setMaxSteps(totalSteps);
         } else {
-          console.log(containerWidth - viewportWidth + scrollbarWidth);
           setStepSize(containerWidth - viewportWidth + scrollbarWidth);
           setMaxSteps(1);
         }

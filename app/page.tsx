@@ -59,14 +59,14 @@ export default function Home() {
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" />
           </div>
         </section>
-        <section className="px-20 xl:px-48 py-12 pb-24 flex justify-between">
-          <div className="w-[36%] relative">
+        <section className="px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
+          <div className="lg:w-[36%] relative">
             <div className="sticky top-36">
               <h1 className="text-4xl 2xl:text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
               <p className="mt-5 text-3xl 2xl:text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
             </div>
           </div>
-          <div className="flex flex-col gap-32">
+          <div className="mt-10 lg:mt-0 flex flex-col items-center lg:items-start gap-16">
             <Feature
               imgUrl="url(/images/Fitness.png)"
               imgText="Physical fit-ness."
@@ -112,13 +112,13 @@ export default function Home() {
             <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OCare+ for Headphones</p>
           </div>
         </div>
-        <div className="flex justify-between items-center">
-          <div className="flex gap-10">
-            <p className="text-grey">Copyright © 2024 Apple Inc. All rights reserved.</p>
+        <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-0 lg:items-center">
+          <div className="flex items-center gap-6 2xl:gap-10">
+            <p className="text-grey">© 2025 OPods Inc.</p>
             <p className="link link-underline link-underline-black cursor-pointer">Privacy Policy</p>
             <p className="link link-underline link-underline-black cursor-pointer">Terms and Conditions</p>
           </div>
-          <div className="flex gap-10">
+          <div className="flex items-center gap-6 2xl:gap-10">
             <div className="flex justify-center items-center gap-2 group cursor-pointer">
               <div className="w-10 h-10 text-xl bg-lighter-grey rounded-full flex justify-center items-center transition-all cursor-pointer before:absolute before:h-6 before:w-6 before:rounded-full before:bg-light-black/[0] before:duration-300 before:ease-out group-hover:before:bg-light-black group-hover:before:h-10 group-hover:before:w-10">
                 <SmartPhone className="z-10 transition-all group-hover:text-white" />

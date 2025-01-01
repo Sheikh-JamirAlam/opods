@@ -17,7 +17,6 @@ export default function AnimateFeature(props: PropType) {
 
   useEffect(() => {
     if (isInView) {
-      console.log(window.innerWidth);
       if (window.innerWidth >= 1536) {
         const enterAnimation = async () => {
           await animate(scope.current, { opacity: 0.7, transform: "translate(7.5rem, 0)" }, { delay: 0.5, duration: 0.3 });

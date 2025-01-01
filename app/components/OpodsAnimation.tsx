@@ -52,21 +52,21 @@ export default function ScrollVideo() {
           <h1>OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>
-        <video className="w-[50%] h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
+        <video className="w-[50%] mr-16 xl:mr-0 h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
       </div>
-      <div style={{ opacity: opacity.get() >= 0.9 ? 1 : opacity.get() }} className="w-64 absolute top-[50vh] right-[15%] 2xl:right-[20%] flex flex-col text-lg font-medium">
+      <div style={{ opacity: opacity.get() >= 0.9 ? 1 : opacity.get() }} className="w-44 lg:w-64 absolute top-[50vh] right-[10%] lg:right-[15%] 2xl:right-[20%] flex flex-col text-lg font-medium">
         <h1>Physical fit-ness.</h1>
         <p className="text-grey">
           The new internal architecture and a refined contour provide a <span className="text-green">natural and secure fit</span> for more people than ever.
         </p>
       </div>
-      <div style={{ opacity: opacitySecond.get() >= 0.9 ? 1 : opacitySecond.get() }} className="w-72 absolute top-[130vh] right-[10%] 2xl:right-[16%] flex flex-col text-lg font-medium">
+      <div style={{ opacity: opacitySecond.get() >= 0.9 ? 1 : opacitySecond.get() }} className="w-44 lg:w-72 absolute top-[130vh] right-[10%] 2xl:right-[16%] flex flex-col text-lg font-medium">
         <h1>Updated stem with force sensor.</h1>
         <p className="text-grey">
           The shortened stem houses the <span className="text-green">H2 chip</span>, while the new force sensor lets you control playback and calls with just a pinch.
         </p>
       </div>
-      <div style={{ opacity: opacityThird.get() >= 0.9 ? 1 : opacityThird.get() }} className="w-[17rem] absolute top-[240vh] right-[8%] 2xl:right-[15%] flex flex-col text-lg font-medium">
+      <div style={{ opacity: opacityThird.get() >= 0.9 ? 1 : opacityThird.get() }} className="w-44 lg:w-[17rem] absolute top-[240vh] right-[8%] 2xl:right-[15%] flex flex-col text-lg font-medium">
         <h1>Dust, sweat and water resistant.</h1>
         <p className="text-grey">
           OPods Z1 and the charging case are rated <span className="text-green">IP54 dust, sweat and water resistant</span>, so they&apos;ll withstand anything from rain to heavy workouts.

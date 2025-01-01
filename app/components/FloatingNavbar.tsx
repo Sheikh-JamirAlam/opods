@@ -12,7 +12,7 @@ export default function FloatingNavbar(props: PropType) {
       initial={{ opacity: 0, y: -10, visibility: "hidden" }}
       animate={props.isFloatingNavVisible ? { opacity: 1, y: 0, visibility: "visible" } : {}}
       transition={{ duration: 0.5, ease: [0.39, 0.24, 0.3, 1] }}
-      className="w-full fixed top-6 z-50"
+      className="w-full fixed top-6 z-50 hidden lg:block"
     >
       <div className="w-[45rem] px-3 py-2 mx-auto flex justify-between items-center rounded-full bg-white border border-lighter-grey shadow-outer-lg">
         <div className="pl-6 text-3xl font-bold cursor-pointer">OPods</div>
