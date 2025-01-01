@@ -1,7 +1,7 @@
 "use client";
 
 import { useMotionValueEvent, useScroll, useSpring, useTransform, motion } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ScreenContainer() {
   const scrollDivRef = useRef<HTMLDivElement>(null);
@@ -16,17 +16,43 @@ export default function ScreenContainer() {
     damping: 25,
   });
 
-  const homeScreenOpacity = useTransform(smoothScroll, [8152, 9064], [0, 1]);
-  const caseOpacity = useTransform(smoothScroll, [8352, 9064], [0, 1]);
-  const caseScale = useTransform(smoothScroll, [8352, 9064], [1.3, 1]);
-  const musicScreenOpacity = useTransform(smoothScroll, [9450, 9650], [0, 1]);
+  const [breakpoints, setBreakpoints] = useState({
+    homeScreenStart: 0,
+    homeScreenEnd: 0,
+    caseStart: 0,
+    caseEnd: 0,
+    musicScreenStart: 0,
+    musicScreenEnd: 0,
+  });
+
+  useEffect(() => {
+    const updateBreakpoints = () => {
+      const screenHeight = window.innerHeight;
+      setBreakpoints({
+        homeScreenStart: screenHeight * 8.756,
+        homeScreenEnd: screenHeight * 9.61,
+        caseStart: screenHeight * 8.868,
+        caseEnd: screenHeight * 9.61,
+        musicScreenStart: screenHeight * 10.03,
+        musicScreenEnd: screenHeight * 10.24,
+      });
+    };
+    updateBreakpoints();
+    window.addEventListener("resize", updateBreakpoints);
+    return () => window.removeEventListener("resize", updateBreakpoints);
+  }, []);
+
+  const homeScreenOpacity = useTransform(smoothScroll, [breakpoints.homeScreenStart, breakpoints.homeScreenEnd], [0, 1]);
+  const caseOpacity = useTransform(smoothScroll, [breakpoints.caseStart, breakpoints.caseEnd], [0, 1]);
+  const caseScale = useTransform(smoothScroll, [breakpoints.caseStart, breakpoints.caseEnd], [1.3, 1]);
+  const musicScreenOpacity = useTransform(smoothScroll, [breakpoints.musicScreenStart, breakpoints.musicScreenEnd], [0, 1]);
 
   const [isBlinking, setIsBlinking] = useState<string>("white");
 
   useMotionValueEvent(smoothScroll, "change", (value) => {
-    if (value >= 9064 && value < 9450) {
+    if (value >= breakpoints.homeScreenEnd && value < breakpoints.musicScreenStart) {
       setIsBlinking("blink");
-    } else if (value >= 9450) {
+    } else if (value >= breakpoints.musicScreenStart) {
       setIsBlinking("green");
     } else {
       setIsBlinking("white");
