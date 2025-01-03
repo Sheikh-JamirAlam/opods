@@ -46,17 +46,17 @@ export default function Home() {
         <section className="overflow-hidden">
           <ColorContainer />
         </section>
-        <section className="px-20 xl:px-48 pb-52 flex flex-col items-center gap-12">
+        <section className="px-20 xl:px-48 pb-28 lg:pb-52 flex flex-col items-center gap-12">
           <div className="w-full h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
-          <h1 className="w-[40rem] mt-56 text-center text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
+          <h1 className="w-[30rem] lg:w-[40rem] mt-56 text-center text-6xl lg:text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
           <CaseContainer />
-          <p className="w-[53rem] text-4xl text-center font-medium">
+          <p className="w-[70%] lg:w-[53rem] text-2xl lg:text-4xl text-center font-medium">
             Power for hours with a smaller, more capable case.
             <span className="text-dark-grey"> The streamlined charging case is more than 10% smaller by volume than the previous generation, with no sacrifice to charging times.</span>
           </p>
-          <div className="w-[53rem] flex justify-between items-center">
-            <Carousel imgUrl="url('/images/Cord.jpg')" imgText="Easy as USB-C" width="26rem" height="26rem" />
-            <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" />
+          <div className="lg:w-[53rem] flex justify-between items-center gap-5 lg:gap-0">
+            <Carousel imgUrl="url('/images/Cord.jpg')" imgText="Easy as USB-C" width="26rem" height="26rem" section="charge" />
+            <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" section="charge" />
           </div>
         </section>
         <section className="px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
@@ -79,7 +79,7 @@ export default function Home() {
         </section>
         <section className="px-20 xl:px-48 pb-20 flex flex-col items-center">
           <div className="w-full h-[54rem] absolute bg-gradient-to-b from-lighter-red from-[34%] via-pink via-[54%]"></div>
-          <h1 className="w-[46rem] pt-[6.25rem] text-center text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
+          <h1 className="w-[35rem] lg:w-[46rem] pt-[6.25rem] text-center text-5xl lg:text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
           <ScreenContainer />
           <p className="pt-20 text-xl xl:text-2xl font-semibold">An instant connection.</p>
           <p className="w-[80%] xl:w-[60rem] text-xl xl:text-2xl font-semibold text-center text-grey">
@@ -93,8 +93,8 @@ export default function Home() {
       </main>
       <footer className="px-20 xl:px-48 py-20 pt-40">
         <h1 className="text-5xl font-semibold">OPods</h1>
-        <div className="py-20 flex gap-20">
-          <div className="flex flex-col gap-5">
+        <div className="py-20 flex flex-wrap lg:flex-nowrap gap-20">
+          <div className="w-full lg:w-auto flex flex-col gap-5">
             <h1 className="pb-2 text-xl text-grey">Explore OPods</h1>
             <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">Explore All OPods</p>
             <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X1</p>
