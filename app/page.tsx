@@ -9,6 +9,7 @@ import AnimateFeature from "./components/AnimateFeature";
 import ScreenContainer from "./components/ScreenContainer";
 import VideoArrow from "./components/VideoArrow";
 import ShopCardContainer from "./components/ShopCardContainer";
+import MenuContainer from "./components/MenuContainer";
 
 export default function Home() {
   return (
@@ -23,7 +24,13 @@ export default function Home() {
           </div>
           <div className="px-6 py-2 rounded-xl bg-light-black cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
         </section>
-        {/* <section className=""></section> */}
+        <section className="bg-transparent visible lg:invisible">
+          <div className="text-4xl text-white font-bold absolute top-12 left-10 cursor-pointer z-50">OPods</div>
+          <MenuContainer />
+          {/* <div className="w-14 h-14 bg-pure-white rounded-full text-2xl flex items-center justify-center fixed top-10 right-6 z-50 shadow-lg">
+            <Menu />
+          </div> */}
+        </section>
         <section className="h-screen w-full relative text-white">
           <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
           <div className="px-20 xl:px-48 pt-[70vh] relative z-10 flex justify-between">
@@ -47,7 +54,7 @@ export default function Home() {
           <ColorContainer />
         </section>
         <section className="px-20 xl:px-48 pb-28 lg:pb-52 flex flex-col items-center gap-12">
-          <div className="w-full h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
+          <div className="w-full h-[36rem] lg:h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
           <h1 className="w-[30rem] lg:w-[40rem] mt-56 text-center text-6xl lg:text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
           <CaseContainer />
           <p className="w-[70%] lg:w-[53rem] text-2xl lg:text-4xl text-center font-medium">

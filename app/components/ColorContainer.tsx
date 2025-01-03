@@ -23,15 +23,15 @@ export default function ColorContainer() {
               : color === "Purple"
               ? "gredient-text-purple"
               : "gredient-text-red -translate-x-10"
-          } w-full text-center font-calligraphy text-[250px] lg:text-[275px] xl:text-[350px] 2xl:text-[490px] absolute z-0`}
+          } w-full text-center font-calligraphy text-[200px] lg:text-[275px] xl:text-[350px] 2xl:text-[490px] absolute z-0`}
         >
           {color}
         </h1>
-        <div className={`w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[550px] 2xl:h-[550px] image-overlay ${color.toLowerCase()} transition-all`}></div>
-        <Image className="w-[300px] lg:w-[350px] xl:w-[400px] 2xl:w-[550px] block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
+        <div className={`w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[550px] 2xl:h-[550px] image-overlay ${color.toLowerCase()} transition-all`}></div>
+        <Image className="w-[250px] lg:w-[350px] xl:w-[400px] 2xl:w-[550px] block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
       </div>
       <p
-        className={`mx-auto text-2xl font-medium transition-all ${
+        className={`mx-auto text-xl lg:text-2xl font-medium transition-all ${
           color === "Black" ? "text-foreground" : color === "Blue" ? "text-teal" : color === "White" ? "text-grey" : color === "Purple" ? "text-purple" : "text-red"
         }`}
       >
