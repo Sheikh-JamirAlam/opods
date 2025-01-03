@@ -25,7 +25,7 @@ export default function ScrollVideo() {
     const calculateViewport = () => {
       setViewportWidth(window.innerWidth);
     };
-
+    calculateViewport();
     window.addEventListener("resize", calculateViewport);
     return () => {
       window.removeEventListener("resize", calculateViewport);
@@ -65,7 +65,7 @@ export default function ScrollVideo() {
     <div className="h-[300vh] relative flex justify-center lg:block" ref={scrollRef}>
       <FloatingNavbar isFloatingNavVisible={isFloatingNavVisible} />
       <div className="h-screen sticky flex justify-center items-center top-0">
-        <div className="w-96 absolute top-24 left-20 xl:left-48 text-2xl flex flex-col gap-5">
+        <div className="w-96 absolute top-24 left-6 md:left-20 xl:left-48 text-2xl flex flex-col gap-5">
           <h1>OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>

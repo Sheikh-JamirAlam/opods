@@ -25,7 +25,12 @@ function useMenuAnimation(isOpen: boolean) {
       ["path.bottom", { d: isOpen ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" }, { at: "<" }],
       ...menuAnimations,
     ]);
-  }, [isOpen]);
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return scope;
 }

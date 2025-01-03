@@ -31,6 +31,7 @@ export default {
       },
       boxShadow: {
         "inner-xl": "inset 4px 0px 12px 0px rgba(0, 0, 0, 0.25)",
+        "inner-2xl": "inset 0px -120px 70px -25px rgba(0, 0, 0, 0.25)",
         "inner-3xl": "inset 0px -206px 70px -25px rgba(0, 0, 0, 0.25)",
         "outer-xl": "0px 0px 15px 2.5px rgba(0,0,0,0.4)",
         "outer-lg": "0px 0px 10px 1px rgba(0,0,0,0.15)",

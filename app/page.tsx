@@ -25,15 +25,12 @@ export default function Home() {
           <div className="px-6 py-2 rounded-xl bg-light-black cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
         </section>
         <section className="bg-transparent visible lg:invisible">
-          <div className="text-4xl text-white font-bold absolute top-12 left-10 cursor-pointer z-50">OPods</div>
+          <div className="text-4xl text-white font-bold absolute top-12 left-6 md:left-10 cursor-pointer z-50">OPods</div>
           <MenuContainer />
-          {/* <div className="w-14 h-14 bg-pure-white rounded-full text-2xl flex items-center justify-center fixed top-10 right-6 z-50 shadow-lg">
-            <Menu />
-          </div> */}
         </section>
         <section className="h-screen w-full relative text-white">
           <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
-          <div className="px-20 xl:px-48 pt-[70vh] relative z-10 flex justify-between">
+          <div className="px-6 md:px-20 xl:px-48 pt-[70vh] relative z-10 flex justify-between">
             <div className="w-80">
               <p className="text-4xl font-bold">OPods</p>
               <p className="text-5xl font-semibold">Next evolution of sound and comfort</p>
@@ -46,18 +43,20 @@ export default function Home() {
         </section>
         <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }}>
           <div className="py-24 text-white flex flex-col gap-20">
-            <h1 className="px-20 xl:px-48 text-5xl font-medium">Premium Features</h1>
+            <h1 className="px-6 md:px-20 xl:px-48 text-3xl md:text-5xl font-medium">Premium Features</h1>
             <CarouselContainer />
           </div>
         </section>
         <section className="overflow-hidden">
           <ColorContainer />
         </section>
-        <section className="px-20 xl:px-48 pb-28 lg:pb-52 flex flex-col items-center gap-12">
-          <div className="w-full h-[36rem] lg:h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
-          <h1 className="w-[30rem] lg:w-[40rem] mt-56 text-center text-6xl lg:text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">Charged fast. And lasts.</h1>
+        <section className="px-6 md:px-20 xl:px-48 pb-28 lg:pb-52 flex flex-col items-center gap-12">
+          <div className="w-full h-[31rem] md:h-[33rem] lg:h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
+          <h1 className="w-[20rem] md:w-[30rem] lg:w-[40rem] mt-56 text-center text-5xl md:text-6xl lg:text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">
+            Charged fast. And lasts.
+          </h1>
           <CaseContainer />
-          <p className="w-[70%] lg:w-[53rem] text-2xl lg:text-4xl text-center font-medium">
+          <p className="w-[70%] lg:w-[53rem] text-lg md:text-2xl lg:text-4xl text-center font-medium">
             Power for hours with a smaller, more capable case.
             <span className="text-dark-grey"> The streamlined charging case is more than 10% smaller by volume than the previous generation, with no sacrifice to charging times.</span>
           </p>
@@ -66,11 +65,11 @@ export default function Home() {
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" section="charge" />
           </div>
         </section>
-        <section className="px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
+        <section className="px-6 md:px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
           <div className="lg:w-[36%] relative">
             <div className="sticky top-36">
-              <h1 className="text-4xl 2xl:text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
-              <p className="mt-5 text-3xl 2xl:text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
+              <h1 className="text-2xl md:text-4xl 2xl:text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>
+              <p className="mt-5 text-xl md:text-3xl 2xl:text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
             </div>
           </div>
           <div className="mt-10 lg:mt-0 flex flex-col items-center lg:items-start gap-16">
@@ -84,21 +83,21 @@ export default function Home() {
             <Feature imgUrl="url(/images/Resist.png)" imgText="Resist Ready." desc="Rated IP54 dust, sweat and water resistant to withstand anything from rain to heavy workouts." txtSide="right" />
           </div>
         </section>
-        <section className="px-20 xl:px-48 pb-20 flex flex-col items-center">
+        <section className="px-6 md:px-20 xl:px-48 pb-20 flex flex-col items-center">
           <div className="w-full h-[54rem] absolute bg-gradient-to-b from-lighter-red from-[34%] via-pink via-[54%]"></div>
-          <h1 className="w-[35rem] lg:w-[46rem] pt-[6.25rem] text-center text-5xl lg:text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
+          <h1 className="w-[18rem] md:w-[35rem] lg:w-[46rem] pt-[6.25rem] text-center text-2xl md:text-5xl lg:text-6xl text-white font-semibold z-10">Seamless Pairing, Instant Connectivity Always</h1>
           <ScreenContainer />
-          <p className="pt-20 text-xl xl:text-2xl font-semibold">An instant connection.</p>
-          <p className="w-[80%] xl:w-[60rem] text-xl xl:text-2xl font-semibold text-center text-grey">
+          <p className="md:text-xl xl:text-2xl font-semibold">An instant connection.</p>
+          <p className="w-[80%] xl:w-[60rem] md:text-xl xl:text-2xl font-semibold text-center text-grey">
             OPods Z1 pair immediately with every device connected to your Apple Account. Just place your OPods near your device and tap Connect.
           </p>
         </section>
-        <section className="py-28 pb-16 bg-white">
-          <h1 className="w-[35rem] mx-20 xl:mx-48 pb-10 text-5xl font-semibold">Why OPods are the best place to buy OPods.</h1>
+        <section className="py-16 md:py-28 pb-16 bg-white">
+          <h1 className="w-[17rem] md:w-[35rem] mx-6 md:mx-20 xl:mx-48 md:pb-10 text-2xl md:text-5xl font-semibold">Why OPods are the best place to buy OPods.</h1>
           <ShopCardContainer />
         </section>
       </main>
-      <footer className="px-20 xl:px-48 py-20 pt-40">
+      <footer className="px-6 md:px-20 xl:px-48 py-20 md:pt-40">
         <h1 className="text-5xl font-semibold">OPods</h1>
         <div className="py-20 flex flex-wrap lg:flex-nowrap gap-20">
           <div className="w-full lg:w-auto flex flex-col gap-5">

@@ -39,9 +39,9 @@ export default function ShopCardContainer() {
   const onDragEnd = () => {
     const x = dragX.get();
 
-    if (x <= -75 && animation < maxSteps) {
+    if (x <= -50 && animation < maxSteps) {
       setAnimation((pv) => pv + 1);
-    } else if (x >= 75 && animation > 0) {
+    } else if (x >= 50 && animation > 0) {
       setAnimation((pv) => pv - 1);
     }
   };
@@ -56,14 +56,14 @@ export default function ShopCardContainer() {
         animate={{ translateX: `-${animation * stepSize}px` }}
         transition={{ duration: 0.5, ease: [0.39, 0.24, 0.3, 1] }}
         onDragEnd={onDragEnd}
-        className="py-10 pb-12 px-20 xl:px-48 flex gap-10 cursor-grab active:cursor-grabbing"
+        className="py-10 pb-12 px-6 md:px-20 xl:px-48 flex gap-5 md:gap-10 cursor-grab active:cursor-grabbing"
       >
         <ShopCard text="Personalise your AirPods for free." desc="Engrave your new OPods with a mix of emoji, names, initials and numbers." Icon={Smiley} />
         <ShopCard text="Monthly payment options available." desc="Choose the easy way to finance with convenient payment options." Icon={CreditCard} />
         <ShopCard text="Get flexible delivery and easy pickup." desc="Get free delivery or pickup at your nearest OPods Store." Icon={Truck} />
-        <ShopCard text="Shop with a Specialist for free." desc="Whether you shop in a store or online, our Specialists can help you pick something perfect." Icon={Chat} />
+        <ShopCard text="Shop with a Specialist for free." desc="Whether you shop in a store or online, our Specialists can help pick your perfect fit." Icon={Chat} />
       </motion.div>
-      <div className="pb-12 px-20 xl:px-48 ml-auto flex gap-5 items-center">
+      <div className="md:pb-12 px-6 md:px-20 xl:px-48 ml-auto flex gap-5 items-center">
         <button
           onClick={() => {
             setAnimation((pv) => pv - 1);

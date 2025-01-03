@@ -18,7 +18,7 @@ export default function CarouselContainer() {
         const containerWidth = carouselContainerRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        const totalSteps = Math.ceil((containerWidth - viewportWidth) / 384) - 1;
+        const totalSteps = Math.ceil((containerWidth - viewportWidth) / (viewportWidth >= 768 ? 384 : 256)) - 1;
         if (totalSteps > 0) {
           setStepSize((containerWidth - viewportWidth + scrollbarWidth) / totalSteps);
           setMaxSteps(totalSteps);
@@ -38,9 +38,9 @@ export default function CarouselContainer() {
 
   const onDragEnd = () => {
     const x = dragX.get();
-    if (x <= -75 && animation < maxSteps) {
+    if (x <= -50 && animation < maxSteps) {
       setAnimation((pv) => pv + 1);
-    } else if (x >= 75 && animation > 0) {
+    } else if (x >= 50 && animation > 0) {
       setAnimation((pv) => pv - 1);
     }
   };
@@ -51,9 +51,9 @@ export default function CarouselContainer() {
         onClick={() => {
           setAnimation((pv) => pv - 1);
         }}
-        className={`w-14 h-14 mt-auto flex justify-center items-center text-xl ${
+        className={`w-10 h-10 md:w-14 md:h-14 mt-auto flex justify-center items-center text-xl ${
           animation === 0 ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute left-24 xl:left-52 z-50`}
+        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute left-10 md:left-24 xl:left-52 z-40`}
       >
         <Arrow className="-rotate-90" />
       </button>
@@ -61,9 +61,9 @@ export default function CarouselContainer() {
         onClick={() => {
           setAnimation((pv) => pv + 1);
         }}
-        className={`w-14 h-14 mt-auto flex justify-center items-center text-xl ${
+        className={`w-10 h-10 md:w-14 md:h-14 mt-auto flex justify-center items-center text-xl ${
           animation === maxSteps ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute right-24 xl:right-52 z-50`}
+        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute right-10 md:right-24 xl:right-52 z-40`}
       >
         <Arrow className="rotate-90" />
       </button>
@@ -75,7 +75,7 @@ export default function CarouselContainer() {
         animate={{ translateX: `-${animation * stepSize}px` }}
         transition={{ duration: 0.5, ease: [0.39, 0.24, 0.3, 1] }}
         onDragEnd={onDragEnd}
-        className="px-20 xl:px-48 flex gap-10"
+        className="px-6 md:px-20 xl:px-48 flex gap-4 md:gap-10"
       >
         <Carousel imgUrl="url('https://www.apple.com/v/airpods-4/b/images/overview/stories/audio_h2__7lchtwyfpnmi_large.jpg')" imgText="A roaring leap in capabilities" width="24rem" height="37rem" />
         <Carousel imgUrl="url('https://www.apple.com/v/airpods-4/b/images/overview/stories/audio_voice__fsh5v6wchyqa_large.jpg')" imgText="Super-clear call quality" width="24rem" height="37rem" />

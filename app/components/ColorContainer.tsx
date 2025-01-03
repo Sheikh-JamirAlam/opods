@@ -8,8 +8,8 @@ export default function ColorContainer() {
 
   return (
     <div className="py-12 flex flex-col justify-center items-center gap-14 overflow-hidden">
-      <div className="w-full px-20 xl:px-48 pt-12">
-        <h1 className="w-[40rem] text-5xl font-semibold">Choose from a wide range of stunning colors</h1>
+      <div className="w-full px-6 md:px-20 xl:px-48 pt-12">
+        <h1 className="md:w-[40rem] text-3xl md:text-5xl font-semibold">Choose from a wide range of stunning colors</h1>
       </div>
       <div className="flex items-center justify-center">
         <h1
@@ -45,14 +45,46 @@ export default function ColorContainer() {
           ? "Royal Purple: Majestic and Unique"
           : "Fiery Red: Vibrant and Striking"}
       </p>
-      <div className="w-[11rem] h-[22rem] flex justify-items-start items-center absolute translate-y-10 lg:translate-y-0 -right-6 lg:right-0 scale-75 lg:scale-100 overflow-hidden">
+      <div className="h-8 flex items-center gap-6 md:absolute visible md:invisible">
+        <div
+          onClick={() => setColor("White")}
+          className={`md:w-10 md:h-10 bg-white rounded-full ${
+            color === "White" ? "w-5 h-5 outline outline-1 outline-pure-white outline-offset-[6px]" : "w-2 h-2"
+          } shadow-outer-xl cursor-pointer transition-all`}
+        ></div>
+        <div
+          onClick={() => setColor("Blue")}
+          className={`md:w-10 md:h-10 bg-teal rounded-full ${
+            color === "Blue" ? "w-5 h-5 outline outline-1 outline-teal outline-offset-[6px]" : "w-2 h-2"
+          } shadow-outer-xl shadow-teal cursor-pointer transition-all`}
+        ></div>
+        <div
+          onClick={() => setColor("Black")}
+          className={`md:w-10 md:h-10 bg-black rounded-full ${
+            color === "Black" ? "w-5 h-5 outline outline-1 outline-black outline-offset-[6px]" : "w-2 h-2"
+          } shadow-outer-xl shadow-black cursor-pointer transition-all`}
+        ></div>
+        <div
+          onClick={() => setColor("Purple")}
+          className={`md:w-10 md:h-10 bg-purple rounded-full ${
+            color === "Purple" ? "w-5 h-5 outline outline-1 outline-purple outline-offset-[6px]" : "w-2 h-2"
+          } shadow-outer-xl shadow-purple cursor-pointer transition-all`}
+        ></div>
+        <div
+          onClick={() => setColor("Red")}
+          className={`md:w-10 md:h-10 bg-red rounded-full ${
+            color === "Red" ? "w-5 h-5 outline outline-1 outline-red outline-offset-[6px]" : "w-2 h-2"
+          } shadow-outer-xl shadow-red cursor-pointer transition-all`}
+        ></div>
+      </div>
+      <div className="w-[11rem] h-[22rem] flex justify-items-start items-center absolute translate-y-10 lg:translate-y-0 -right-[22px] lg:right-0 scale-75 lg:scale-100 overflow-x-hidden invisible md:visible">
         <div className="w-[22rem] h-[22rem] flex justify-center items-center absolute left-3">
           <div className="w-[20rem] h-[20rem] bg-off-white rounded-full absolute z-10"></div>
           <div className="w-[18rem] h-[18rem] bg-background rounded-full flex justify-start items-center absolute z-10 shadow-inner-xl">
             <div
               onClick={() => setColor("White")}
               className={`w-10 h-10 bg-white rounded-full ${
-                color === "White" && "outline outline-1 outline-black outline-offset-[6px]"
+                color === "White" && "outline outline-1 outline-pure-white outline-offset-[6px]"
               } absolute left-[5rem] top-[-1.25rem] z-30 shadow-outer-xl cursor-pointer transition-all`}
             ></div>
             <div

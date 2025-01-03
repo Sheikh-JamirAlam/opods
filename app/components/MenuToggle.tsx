@@ -1,7 +1,7 @@
 const Path = (props: any) => <path fill="transparent" strokeWidth="3" stroke="var(--foreground)" strokeLinecap="round" {...props} />;
 
 export const MenuToggle = ({ toggle }: any) => (
-  <button className="w-14 h-14 bg-pure-white rounded-full text-2xl flex items-center justify-center fixed top-10 right-6 z-50 shadow-lg" onClick={toggle}>
+  <button className="w-12 h-12 bg-pure-white rounded-full text-xl flex items-center justify-center fixed top-10 right-6 z-50 shadow-lg" onClick={toggle}>
     <svg width="23" height="18" viewBox="0 0 23 18">
       <Path
         d="M 2 2.5 L 20 2.5"
