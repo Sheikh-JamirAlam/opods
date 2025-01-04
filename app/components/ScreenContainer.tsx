@@ -1,7 +1,7 @@
 "use client";
 
 import { useMotionValueEvent, useScroll, useSpring, useTransform, motion } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ScreenContainer() {
   const scrollDivRef = useRef<HTMLDivElement>(null);
@@ -33,15 +33,28 @@ export default function ScreenContainer() {
     }
   });
 
+  const [viewportWidth, setViewportWidth] = useState(0);
+
+  useEffect(() => {
+    const calculateViewport = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    calculateViewport();
+    window.addEventListener("resize", calculateViewport);
+    return () => {
+      window.removeEventListener("resize", calculateViewport);
+    };
+  }, []);
+
   return (
     <div ref={scrollDivRef} className="h-[65rem] md:h-[90rem] z-10">
       <div className="h-[475px] md:h-[690px] mt-10 md:mt-20 sticky top-[15%] flex justify-center items-center">
-        <div className="flex items-end">
+        <div className="flex items-end scale-[0.85] 2xs:scale-100">
           <motion.img className="w-60 md:w-[350px]" style={{ opacity: homeScreenOpacity }} src="/images/HomeScreen.png" width={350} alt="Connection screen" />
           <motion.img className="w-60 md:w-[350px] opacity-0 absolute" style={{ opacity: musicScreenOpacity }} src="/images/MusicScreen.png" width={350} alt="Connection screen" />
           <motion.img
-            style={{ opacity: caseOpacity, scale: caseScale, translateX: "10rem", translateY: "-0.7rem" }}
-            className="w-32 md:w-[200px] absolute translate-x-40 -translate-y-[0.7rem]"
+            style={{ opacity: caseOpacity, scale: caseScale, translateX: viewportWidth >= 768 ? "15rem" : "10rem", translateY: viewportWidth >= 768 ? "-1rem" : "-0.7rem" }}
+            className="w-32 md:w-[200px] absolute translate-x-40 -translate-y-[0.7rem] md:translate-x-60 md:-translate-y-4"
             src="/images/OpenCase.png"
             width={200}
             alt="Open OPods Case"

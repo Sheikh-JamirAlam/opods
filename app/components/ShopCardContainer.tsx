@@ -18,7 +18,7 @@ export default function ShopCardContainer() {
         const containerWidth = containerRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        const totalSteps = Math.ceil((containerWidth - viewportWidth) / 448) - 1;
+        const totalSteps = Math.ceil((containerWidth - viewportWidth) / (viewportWidth >= 768 ? 448 : 288)) - 1;
         if (totalSteps > 0) {
           setStepSize((containerWidth - viewportWidth + scrollbarWidth) / totalSteps);
           setMaxSteps(totalSteps);

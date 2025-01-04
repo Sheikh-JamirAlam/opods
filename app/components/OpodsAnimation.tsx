@@ -65,15 +65,15 @@ export default function ScrollVideo() {
     <div className="h-[300vh] relative flex justify-center lg:block" ref={scrollRef}>
       <FloatingNavbar isFloatingNavVisible={isFloatingNavVisible} />
       <div className="h-screen sticky flex justify-center items-center top-0">
-        <div className="w-96 absolute top-24 left-6 md:left-20 xl:left-48 text-2xl flex flex-col gap-5">
+        <div className="w-auto xs:w-96 pr-6 xs:pr-0 absolute top-24 left-6 md:left-20 xl:left-48 text-2xl flex flex-col gap-5">
           <h1>OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>
         <video className="w-[75%] lg:w-[50%] mr-0 lg:mr-16 xl:mr-0 h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
       </div>
       <div
-        style={{ opacity: viewportWidth <= 1024 ? opacityPhone.get() : opacity.get() >= 0.9 ? 1 : opacity.get() }}
-        className="w-[30rem] lg:w-64 text-center lg:text-left absolute top-[85vh] lg:top-[50vh] lg:right-[15%] 2xl:right-[20%] flex flex-col text-lg font-medium"
+        style={{ opacity: viewportWidth < 1024 ? opacityPhone.get() : opacity.get() >= 0.9 ? 1 : opacity.get() }}
+        className="w-[70%] sm:w-[30rem] lg:w-64 text-center lg:text-left absolute top-[85vh] lg:top-[50vh] lg:right-[15%] 2xl:right-[20%] flex flex-col text-lg font-medium"
       >
         <h1>Physical fit-ness.</h1>
         <p className="text-grey">
@@ -81,8 +81,8 @@ export default function ScrollVideo() {
         </p>
       </div>
       <div
-        style={{ opacity: viewportWidth <= 1024 ? opacitySecondPhone.get() : opacitySecond.get() >= 0.9 ? 1 : opacitySecond.get() }}
-        className="w-[30rem] lg:w-72 text-center lg:text-left absolute top-[150vh] lg:top-[130vh] lg:right-[10%] 2xl:right-[16%] flex flex-col text-lg font-medium"
+        style={{ opacity: viewportWidth < 1024 ? opacitySecondPhone.get() : opacitySecond.get() >= 0.9 ? 1 : opacitySecond.get() }}
+        className="w-[70%] sm:w-[30rem] lg:w-72 text-center lg:text-left absolute top-[150vh] lg:top-[130vh] lg:right-[10%] 2xl:right-[16%] flex flex-col text-lg font-medium"
       >
         <h1>Updated stem with force sensor.</h1>
         <p className="text-grey">
@@ -90,8 +90,8 @@ export default function ScrollVideo() {
         </p>
       </div>
       <div
-        style={{ opacity: viewportWidth <= 1024 ? opacityThirdPhone.get() : opacityThird.get() >= 0.9 ? 1 : opacityThird.get() }}
-        className="w-[30rem] lg:w-[17rem] text-center lg:text-left absolute top-[270vh] lg:top-[240vh] lg:right-[8%] 2xl:right-[15%] flex flex-col text-lg font-medium"
+        style={{ opacity: viewportWidth < 1024 ? opacityThirdPhone.get() : opacityThird.get() >= 0.9 ? 1 : opacityThird.get() }}
+        className="w-[70%] sm:w-[30rem] lg:w-[17rem] text-center lg:text-left absolute top-[270vh] lg:top-[240vh] lg:right-[8%] 2xl:right-[14%] flex flex-col text-lg font-medium"
       >
         <h1>Dust, sweat and water resistant.</h1>
         <p className="text-grey">

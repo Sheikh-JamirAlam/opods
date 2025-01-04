@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       <main>
-        <section className="w-full bg-transparent px-20 xl:px-48 py-6 flex justify-between items-center text-white absolute top-0 z-50 invisible lg:visible">
+        <section className="w-full bg-transparent px-20 xl:px-48 py-6 hidden lg:flex justify-between items-center text-white absolute top-0 z-50">
           <div className="text-3xl font-bold cursor-pointer">OPods</div>
           <div className="w-80 flex justify-between items-center font-semibold">
             <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Overview</p>
@@ -30,10 +30,10 @@ export default function Home() {
         </section>
         <section className="h-screen w-full relative text-white">
           <video src="/videos/OPods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>
-          <div className="px-6 md:px-20 xl:px-48 pt-[70vh] relative z-10 flex justify-between">
-            <div className="w-80">
-              <p className="text-4xl font-bold">OPods</p>
-              <p className="text-5xl font-semibold">Next evolution of sound and comfort</p>
+          <div className="h-[90%] px-6 md:px-20 xl:px-48 relative z-10 flex justify-between items-end">
+            <div className="w-[70%] sm:w-80">
+              <p className="text-3xl sm:text-4xl font-bold">OPods</p>
+              <p className="text-4xl sm:text-5xl font-semibold">Next evolution of sound and comfort</p>
             </div>
             <VideoArrow />
           </div>
@@ -50,17 +50,17 @@ export default function Home() {
         <section className="overflow-hidden">
           <ColorContainer />
         </section>
-        <section className="px-6 md:px-20 xl:px-48 pb-28 lg:pb-52 flex flex-col items-center gap-12">
-          <div className="w-full h-[31rem] md:h-[33rem] lg:h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
+        <section className="px-6 md:px-20 xl:px-48 sm:pb-28 lg:pb-52 flex flex-col items-center gap-12">
+          <div className="w-full h-[29rem] xs:h-[31rem] md:h-[33rem] lg:h-[41rem] absolute bg-gradient-to-t from-aqua from-45%"></div>
           <h1 className="w-[20rem] md:w-[30rem] lg:w-[40rem] mt-56 text-center text-5xl md:text-6xl lg:text-8xl text-white font-semibold z-10 drop-shadow-[0_6px_6px_rgba(0,0,0,0.4)]">
             Charged fast. And lasts.
           </h1>
           <CaseContainer />
-          <p className="w-[70%] lg:w-[53rem] text-lg md:text-2xl lg:text-4xl text-center font-medium">
+          <p className="w-[70%] lg:w-[53rem] text-base xs:text-lg md:text-2xl lg:text-4xl text-center font-medium">
             Power for hours with a smaller, more capable case.
             <span className="text-dark-grey"> The streamlined charging case is more than 10% smaller by volume than the previous generation, with no sacrifice to charging times.</span>
           </p>
-          <div className="lg:w-[53rem] flex justify-between items-center gap-5 lg:gap-0">
+          <div className="lg:w-[53rem] flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-5 lg:gap-0">
             <Carousel imgUrl="url('/images/Cord.jpg')" imgText="Easy as USB-C" width="26rem" height="26rem" section="charge" />
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" section="charge" />
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
               <p className="mt-5 text-xl md:text-3xl 2xl:text-4xl font-medium">OPods Z1 provide exceptional fit, all-day comfort and greater stability with your every move.</p>
             </div>
           </div>
-          <div className="mt-10 lg:mt-0 flex flex-col items-center lg:items-start gap-16">
+          <div className="mt-4 2xs:mt-10 lg:mt-0 flex flex-col items-center lg:items-start gap-4 2xs:gap-12 sm:gap-16">
             <Feature
               imgUrl="url(/images/Fitness.png)"
               imgText="Physical fit-ness."
@@ -98,33 +98,33 @@ export default function Home() {
         </section>
       </main>
       <footer className="px-6 md:px-20 xl:px-48 py-20 md:pt-40">
-        <h1 className="text-5xl font-semibold">OPods</h1>
-        <div className="py-20 flex flex-wrap lg:flex-nowrap gap-20">
-          <div className="w-full lg:w-auto flex flex-col gap-5">
-            <h1 className="pb-2 text-xl text-grey">Explore OPods</h1>
-            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">Explore All OPods</p>
-            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X1</p>
-            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X2 Pro</p>
-            <p className="w-fit text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods Max</p>
+        <h1 className="text-3xl sm:text-5xl font-semibold">OPods</h1>
+        <div className="py-10 sm:py-20 flex flex-wrap lg:flex-nowrap gap-10 sm:gap-20">
+          <div className="w-full lg:w-auto flex flex-col gap-3 sm:gap-5">
+            <h1 className="pb-2 text-base sm:text-xl text-grey">Explore OPods</h1>
+            <p className="w-fit text-2xl sm:text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">Explore All OPods</p>
+            <p className="w-fit text-2xl sm:text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X1</p>
+            <p className="w-fit text-2xl sm:text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods X2 Pro</p>
+            <p className="w-fit text-2xl sm:text-4xl font-medium link link-underline link-underline-big link-underline-black cursor-pointer">OPods Max</p>
           </div>
-          <div className="flex flex-col gap-5">
-            <h1 className="pb-2 text-xl text-grey">Shop OPods</h1>
-            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">Shop OPods</p>
-            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Accessories</p>
+          <div className="flex flex-col gap-3 sm:gap-5">
+            <h1 className="pb-2 text-base sm:text-xl text-grey">Shop OPods</h1>
+            <p className="w-fit text-base sm:text-xl font-medium link link-underline link-underline-black cursor-pointer">Shop OPods</p>
+            <p className="w-fit text-base sm:text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Accessories</p>
           </div>
-          <div className="flex flex-col gap-5">
-            <h1 className="pb-2 text-xl text-grey">More from OPods</h1>
-            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Support</p>
-            <p className="w-fit text-xl font-medium link link-underline link-underline-black cursor-pointer">OCare+ for Headphones</p>
+          <div className="flex flex-col gap-3 sm:gap-5">
+            <h1 className="pb-2 text-base sm:text-xl text-grey">More from OPods</h1>
+            <p className="w-fit text-base sm:text-xl font-medium link link-underline link-underline-black cursor-pointer">OPods Support</p>
+            <p className="w-fit text-base sm:text-xl font-medium link link-underline link-underline-black cursor-pointer">OCare+ for Headphones</p>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-0 lg:items-center">
-          <div className="flex items-center gap-6 2xl:gap-10">
-            <p className="text-grey">© 2025 OPods Inc.</p>
-            <p className="link link-underline link-underline-black cursor-pointer">Privacy Policy</p>
-            <p className="link link-underline link-underline-black cursor-pointer">Terms and Conditions</p>
+          <div className="flex flex-wrap xs:flex-nowrap items-center gap-2 xs:gap-6 2xl:gap-10">
+            <p className="w-full xs:w-auto text-grey text-xs sm:text-base">© 2025 OPods Inc.</p>
+            <p className="mr-4 xs:mr-0 text-xs sm:text-base link link-underline link-underline-black cursor-pointer">Privacy Policy</p>
+            <p className="text-xs sm:text-base link link-underline link-underline-black cursor-pointer">Terms and Conditions</p>
           </div>
-          <div className="flex items-center gap-6 2xl:gap-10">
+          <div className="flex flex-wrap xs:flex-nowrap items-center gap-4 xs:gap-6 2xl:gap-10 text-base">
             <div className="flex justify-center items-center gap-2 group cursor-pointer">
               <div className="w-10 h-10 text-xl bg-lighter-grey rounded-full flex justify-center items-center transition-all cursor-pointer before:absolute before:h-6 before:w-6 before:rounded-full before:bg-light-black/[0] before:duration-300 before:ease-out group-hover:before:bg-light-black group-hover:before:h-10 group-hover:before:w-10">
                 <SmartPhone className="z-10 transition-all group-hover:text-white" />
