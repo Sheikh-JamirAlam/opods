@@ -28,7 +28,7 @@ export default function Home() {
           <div className="text-4xl text-white font-bold absolute top-12 left-6 md:left-10 cursor-pointer z-50">OPods</div>
           <MenuContainer />
         </section>
-        <section className="h-screen w-full relative text-white">
+        <section className="h-svh h-screen w-full relative text-white">
           <video
             src="/videos/Opods.mp4"
             autoPlay
