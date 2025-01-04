@@ -38,9 +38,9 @@ export default function CarouselContainer() {
 
   const onDragEnd = () => {
     const x = dragX.get();
-    if (x <= -50 && animation < maxSteps) {
+    if (x <= -25 && animation < maxSteps) {
       setAnimation((pv) => pv + 1);
-    } else if (x >= 50 && animation > 0) {
+    } else if (x >= 25 && animation > 0) {
       setAnimation((pv) => pv - 1);
     }
   };
