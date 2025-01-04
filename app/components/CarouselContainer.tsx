@@ -53,7 +53,7 @@ export default function CarouselContainer() {
         }}
         className={`w-10 h-10 md:w-14 md:h-14 mt-auto flex justify-center items-center text-xl ${
           animation === 0 ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute left-10 md:left-24 xl:left-52 z-40`}
+        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute left-4 xs:left-10 md:left-24 xl:left-52 z-40`}
       >
         <Arrow className="-rotate-90" />
       </button>
@@ -63,7 +63,7 @@ export default function CarouselContainer() {
         }}
         className={`w-10 h-10 md:w-14 md:h-14 mt-auto flex justify-center items-center text-xl ${
           animation === maxSteps ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute right-10 md:right-24 xl:right-52 z-40`}
+        } bg-opacity-50 bg-light-black hover:bg-opacity-75 hover:bg-light-grey transition-all rounded-full absolute right-4 xs:right-10 md:right-24 xl:right-52 z-40`}
       >
         <Arrow className="rotate-90" />
       </button>

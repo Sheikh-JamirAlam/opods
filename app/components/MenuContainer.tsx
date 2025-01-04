@@ -41,7 +41,7 @@ export default function MenuContainer() {
 
   return (
     <div ref={scope}>
-      <Menu />
+      <Menu setIsOpen={setIsOpen} />
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
     </div>
   );

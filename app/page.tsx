@@ -10,6 +10,7 @@ import ScreenContainer from "./components/ScreenContainer";
 import VideoArrow from "./components/VideoArrow";
 import ShopCardContainer from "./components/ShopCardContainer";
 import MenuContainer from "./components/MenuContainer";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -17,18 +18,14 @@ export default function Home() {
       <main>
         <section className="w-full bg-transparent px-20 xl:px-48 py-6 hidden lg:flex justify-between items-center text-white absolute top-0 z-50">
           <div className="text-3xl font-bold cursor-pointer">OPods</div>
-          <div className="w-80 flex justify-between items-center font-semibold">
-            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Overview</p>
-            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Specs</p>
-            <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Compare</p>
-          </div>
+          <Navbar />
           <div className="px-6 py-2 rounded-xl bg-light-black cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
         </section>
         <section className="bg-transparent visible lg:invisible">
           <div className="text-4xl text-white font-bold absolute top-12 left-6 md:left-10 cursor-pointer z-50">OPods</div>
           <MenuContainer />
         </section>
-        <section className="h-svh h-screen w-full relative text-white">
+        <section className="h-svh min-h-[34.375rem] max-h-[62.5rem] xs:min-h-[37.5rem] xs:max-h-[53.125rem] md:min-h-[43.75rem] md:max-h-[53.125rem] lg:min-h-[50rem] lg:max-h-full w-full relative text-white">
           <video
             src="/videos/Opods.mp4"
             autoPlay
@@ -48,10 +45,10 @@ export default function Home() {
             <VideoArrow />
           </div>
         </section>
-        <section id="opods-animation-section" className="bg-white">
+        <section id="opods" className="bg-white">
           <OpodsAnimation />
         </section>
-        <section style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }}>
+        <section id="features" style={{ background: "radial-gradient(ellipse at 33% 0%, rgb(189,175,227) 0%, rgb(67,51,114) 72%)", backgroundSize: "150% 100%" }}>
           <div className="py-24 text-white flex flex-col gap-20">
             <h1 className="px-6 md:px-20 xl:px-48 text-3xl md:text-5xl font-medium">Premium Features</h1>
             <CarouselContainer />
@@ -75,7 +72,7 @@ export default function Home() {
             <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" section="charge" />
           </div>
         </section>
-        <section className="px-6 md:px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
+        <section id="specs" className="px-6 md:px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
           <div className="lg:w-[36%] relative">
             <div className="sticky top-36">
               <h1 className="text-2xl md:text-4xl 2xl:text-5xl font-semibold">Redesigned for comfort. How fitting.</h1>

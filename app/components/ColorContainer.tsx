@@ -23,16 +23,14 @@ export default function ColorContainer() {
               : color === "Purple"
               ? "gredient-text-purple"
               : "gredient-text-red -translate-x-10"
-          } w-full text-center font-calligraphy ${
-            color === "Red" ? "mr-0" : "mr-6"
-          } xs:mr-0 text-[120px] xs:text-[150px] sm:text-[200px] lg:text-[275px] xl:text-[350px] 2xl:text-[490px] absolute z-0`}
+          } w-full text-center font-calligraphy ${color === "Red" ? "mr-0" : "mr-6"} xs:mr-0 text-[38vw] xs:text-[150px] sm:text-[200px] lg:text-[275px] xl:text-[350px] 2xl:text-[490px] absolute z-0`}
         >
           {color}
         </h1>
         <div
-          className={`w-[150px] h-[150px] xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[550px] 2xl:h-[550px] image-overlay ${color.toLowerCase()} transition-all`}
+          className={`w-[46vw] h-[46vw] xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[550px] 2xl:h-[550px] image-overlay ${color.toLowerCase()} transition-all`}
         ></div>
-        <Image className="w-[150px] xs:w-[200px] sm:w-[250px] lg:w-[350px] xl:w-[400px] 2xl:w-[550px] block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
+        <Image className="w-[46vw] xs:w-[200px] sm:w-[250px] lg:w-[350px] xl:w-[400px] 2xl:w-[550px] block z-10" src="/images/OPods.png" width={550} height={550} alt="Image of our OPods" />
       </div>
       <p
         className={`mx-auto text-base xs:text-xl lg:text-2xl font-medium transition-all ${

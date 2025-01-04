@@ -17,9 +17,33 @@ export default function FloatingNavbar(props: PropType) {
       <div className="w-[45rem] px-3 py-2 mx-auto flex justify-between items-center rounded-full bg-white border border-lighter-grey shadow-outer-lg">
         <div className="pl-6 text-3xl font-bold cursor-pointer">OPods</div>
         <div className="w-80 flex justify-between items-center font-semibold">
-          <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Overview</p>
-          <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Specs</p>
-          <p className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500">Compare</p>
+          <p
+            className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500"
+            onClick={(e) => {
+              document.getElementById("opods")?.scrollIntoView({ behavior: "smooth" });
+              e.preventDefault();
+            }}
+          >
+            Overview
+          </p>
+          <p
+            className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500"
+            onClick={(e) => {
+              document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
+              e.preventDefault();
+            }}
+          >
+            Features
+          </p>
+          <p
+            className="px-4 py-2 rounded-full cursor-pointer hover:bg-grey/[0.2] transition-all duration-500"
+            onClick={(e) => {
+              document.getElementById("specs")?.scrollIntoView({ behavior: "smooth" });
+              e.preventDefault();
+            }}
+          >
+            Specs
+          </p>
         </div>
         <div className="px-6 py-2 rounded-full bg-light-black text-white cursor-pointer hover:bg-dark-grey transition-all duration-500">Buy now</div>
       </div>
