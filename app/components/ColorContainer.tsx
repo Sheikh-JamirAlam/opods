@@ -49,31 +49,31 @@ export default function ColorContainer() {
         <div
           onClick={() => setColor("White")}
           className={`md:w-10 md:h-10 bg-white rounded-full ${
-            color === "White" ? "w-5 h-5 outline outline-1 outline-pure-white outline-offset-[6px]" : "w-2 h-2"
+            color === "White" ? "w-5 h-5 outline outline-1 outline-pure-white outline-offset-[6px]" : "w-3 h-3"
           } shadow-outer-xl cursor-pointer transition-all`}
         ></div>
         <div
           onClick={() => setColor("Blue")}
           className={`md:w-10 md:h-10 bg-teal rounded-full ${
-            color === "Blue" ? "w-5 h-5 outline outline-1 outline-teal outline-offset-[6px]" : "w-2 h-2"
+            color === "Blue" ? "w-5 h-5 outline outline-1 outline-teal outline-offset-[6px]" : "w-3 h-3"
           } shadow-outer-xl shadow-teal cursor-pointer transition-all`}
         ></div>
         <div
           onClick={() => setColor("Black")}
           className={`md:w-10 md:h-10 bg-black rounded-full ${
-            color === "Black" ? "w-5 h-5 outline outline-1 outline-black outline-offset-[6px]" : "w-2 h-2"
+            color === "Black" ? "w-5 h-5 outline outline-1 outline-black outline-offset-[6px]" : "w-3 h-3"
           } shadow-outer-xl shadow-black cursor-pointer transition-all`}
         ></div>
         <div
           onClick={() => setColor("Purple")}
           className={`md:w-10 md:h-10 bg-purple rounded-full ${
-            color === "Purple" ? "w-5 h-5 outline outline-1 outline-purple outline-offset-[6px]" : "w-2 h-2"
+            color === "Purple" ? "w-5 h-5 outline outline-1 outline-purple outline-offset-[6px]" : "w-3 h-3"
           } shadow-outer-xl shadow-purple cursor-pointer transition-all`}
         ></div>
         <div
           onClick={() => setColor("Red")}
           className={`md:w-10 md:h-10 bg-red rounded-full ${
-            color === "Red" ? "w-5 h-5 outline outline-1 outline-red outline-offset-[6px]" : "w-2 h-2"
+            color === "Red" ? "w-5 h-5 outline outline-1 outline-red outline-offset-[6px]" : "w-3 h-3"
           } shadow-outer-xl shadow-red cursor-pointer transition-all`}
         ></div>
       </div>
