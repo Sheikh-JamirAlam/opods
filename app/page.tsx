@@ -29,7 +29,17 @@ export default function Home() {
           <MenuContainer />
         </section>
         <section className="h-screen w-full relative text-white">
-          <video src="/videos/Opods.mp4" autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"></video>;
+          <video
+            src="/videos/Opods.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"
+            aria-label="A video of showcasing OPods"
+          ></video>
+          ;
           <div className="h-[90%] px-6 md:px-20 xl:px-48 relative z-10 flex justify-between items-end">
             <div className="w-[70%] sm:w-80">
               <p className="text-3xl sm:text-4xl font-bold">OPods</p>

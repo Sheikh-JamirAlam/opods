@@ -65,11 +65,18 @@ export default function ScrollVideo() {
     <div className="h-[300vh] relative flex justify-center lg:block" ref={scrollRef}>
       <FloatingNavbar isFloatingNavVisible={isFloatingNavVisible} />
       <div className="h-screen sticky flex justify-center items-center top-0">
-        <div className="w-auto xs:w-96 pr-6 xs:pr-0 absolute top-24 left-6 md:left-20 xl:left-48 text-2xl flex flex-col gap-5">
-          <h1>OPods Z1</h1>
+        <div className="w-auto xs:w-96 pr-6 xs:pr-0 absolute top-24 left-6 md:left-20 xl:left-48 text-lg xs:text-2xl flex flex-col gap-5">
+          <h1 className="font-medium">OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>
-        <video className="w-[75%] lg:w-[50%] mr-0 lg:mr-16 xl:mr-0 h-auto" ref={videoRef} src="/videos/Features.mp4" muted playsInline></video>
+        <video
+          className="w-[90%] xs:w-[75%] lg:w-[50%] ml-8 xs:ml-0 mr-0 lg:mr-16 xl:mr-0 h-auto"
+          ref={videoRef}
+          src="/videos/Features.mp4"
+          muted
+          playsInline
+          aria-label="A video of the different features of OPods"
+        ></video>
       </div>
       <div
         style={{ opacity: viewportWidth < 1024 ? opacityPhone.get() : opacity.get() >= 0.9 ? 1 : opacity.get() }}
