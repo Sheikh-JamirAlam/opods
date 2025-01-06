@@ -36,7 +36,7 @@ export default function ScrollVideo() {
   const [deviceType, setDeviceType] = useState<"desktop" | "mobile">("desktop");
 
   useEffect(() => {
-    const hoverMediaQuery = window.matchMedia("(hover: hover)");
+    const hoverMediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     const updateDeviceType = () => {
       setDeviceType(hoverMediaQuery.matches ? "desktop" : "mobile");
     };
