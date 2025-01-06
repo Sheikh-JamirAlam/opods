@@ -2,6 +2,7 @@
 
 import { useMotionValueEvent, useScroll, useSpring, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import FloatingNavbar from "./FloatingNavbar";
 
 export default function ScrollVideo() {
@@ -29,6 +30,20 @@ export default function ScrollVideo() {
     window.addEventListener("resize", calculateViewport);
     return () => {
       window.removeEventListener("resize", calculateViewport);
+    };
+  }, []);
+
+  const [deviceType, setDeviceType] = useState<"desktop" | "mobile">("desktop");
+
+  useEffect(() => {
+    const hoverMediaQuery = window.matchMedia("(hover: hover)");
+    const updateDeviceType = () => {
+      setDeviceType(hoverMediaQuery.matches ? "desktop" : "mobile");
+    };
+    updateDeviceType();
+    hoverMediaQuery.addEventListener("change", updateDeviceType);
+    return () => {
+      hoverMediaQuery.removeEventListener("change", updateDeviceType);
     };
   }, []);
 
@@ -61,7 +76,7 @@ export default function ScrollVideo() {
     }
   });
 
-  return (
+  return deviceType === "desktop" ? (
     <div className="h-[300vh] relative flex justify-center lg:block" ref={scrollRef}>
       <FloatingNavbar isFloatingNavVisible={isFloatingNavVisible} />
       <div className="h-screen sticky flex justify-center items-center top-0">
@@ -69,14 +84,10 @@ export default function ScrollVideo() {
           <h1 className="font-medium">OPods Z1</h1>
           <p>Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
         </div>
-        <video
-          className="w-[90%] xs:w-[75%] lg:w-[50%] ml-8 xs:ml-0 mr-0 lg:mr-16 xl:mr-0 h-auto"
-          ref={videoRef}
-          src="/videos/Features.mp4"
-          muted
-          playsInline
-          aria-label="A video of the different features of OPods"
-        ></video>
+        <video className="w-[90%] xs:w-[75%] lg:w-[50%] ml-8 xs:ml-0 mr-0 lg:mr-16 xl:mr-0 h-auto" ref={videoRef} muted playsInline aria-label="A video of the different features of OPods">
+          <source src="/videos/Features.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div
         style={{ opacity: viewportWidth < 1024 ? opacityPhone.get() : opacity.get() >= 0.9 ? 1 : opacity.get() }}
@@ -104,6 +115,40 @@ export default function ScrollVideo() {
         <p className="text-grey">
           OPods Z1 and the charging case are rated <span className="text-green">IP54 dust, sweat and water resistant</span>, so they&apos;ll withstand anything from rain to heavy workouts.
         </p>
+      </div>
+    </div>
+  ) : (
+    <div className="pb-32 md:pb-72 relative flex flex-col items-center overflow-x-hidden">
+      <div className="w-auto pt-24 mx-6 md:mx-20 xl:mx-48 flex flex-col items-center gap-8">
+        <h1 className="text-4xl md:text-6xl font-semibold">OPods Z1</h1>
+        <p className="md:w-[40rem] text-center text-lg md:text-xl text-dark-grey font-medium">Experience immersive sound with OPods Z1: sleek, wireless, and built for unbeatable audio clarity.</p>
+      </div>
+      <div className="w-[125%] xs:w-[95%] md:w-[45rem] mt-16 md:flex justify-end overflow-x-hidden">
+        <Image className="w-full ml-14 2xs:ml-16 md:ml-0" src="/images/Feature1.jpg" width={500} height={500} alt="Features of OPods" />
+        <div className="w-[65%] xs:w-[70%] md:w-48 mx-auto mt-6 md:mt-0 text-sm md:text-base text-center md:text-left md:absolute md:translate-y-40">
+          <h1>Physical fit-ness.</h1>
+          <p className="text-grey">
+            The new internal architecture and a refined contour provide a <span className="text-green">natural and secure fit</span> for more people than ever.
+          </p>
+        </div>
+      </div>
+      <div className="w-[100%] xs:w-[87%] md:w-[35rem] mt-40 md:mt-52 lg:mt-60 md:mr-20 md:flex justify-end overflow-x-hidden">
+        <Image className="w-full" src="/images/Feature2.jpg" width={500} height={500} alt="Second Feature of OPods" />
+        <div className="w-[65%] xs:w-[70%] md:w-64 mx-auto mt-14 md:mt-0 text-sm md:text-base text-center md:text-left md:absolute md:translate-x-28 md:translate-y-36">
+          <h1>Updated stem with force sensor.</h1>
+          <p className="text-grey">
+            The shortened stem houses the <span className="text-green">H2 chip</span>, while the new force sensor lets you control playback and calls with just a pinch.
+          </p>
+        </div>
+      </div>
+      <div className="w-[100%] xs:w-[87%] md:w-[35rem] mt-40 md:mt-60 md:flex justify-center overflow-x-hidden">
+        <Image className="w-full" src="/images/Feature3.jpg" width={500} height={500} alt="Third Feature of OPods" />
+        <div className="w-[65%] xs:w-[70%] md:w-[30rem] mx-auto mt-14 md:mt-0 text-sm md:text-base text-center md:absolute md:translate-y-[22rem]">
+          <h1>Dust, sweat and water resistant.</h1>
+          <p className="text-grey">
+            OPods Z1 and the charging case are rated <span className="text-green">IP54 dust, sweat and water resistant</span>, so they&apos;ll withstand anything from rain to heavy workouts.
+          </p>
+        </div>
       </div>
     </div>
   );

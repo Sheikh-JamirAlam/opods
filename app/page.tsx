@@ -26,17 +26,10 @@ export default function Home() {
           <MenuContainer />
         </section>
         <section className="h-svh min-h-[34.375rem] max-h-[62.5rem] xs:min-h-[37.5rem] xs:max-h-[53.125rem] md:min-h-[43.75rem] md:max-h-[53.125rem] lg:min-h-[50rem] lg:max-h-full w-full relative text-white">
-          <video
-            src="/videos/Opods.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none"
-            aria-label="A video of showcasing OPods"
-          ></video>
-          ;
+          <video autoPlay loop muted playsInline preload="none" className="h-full w-full absolute top-0 z-0 object-cover pointer-events-none" aria-label="A video of showcasing OPods">
+            <source src="/videos/Opods.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="h-[90%] px-6 md:px-20 xl:px-48 relative z-10 flex justify-between items-end">
             <div className="w-[70%] sm:w-80">
               <p className="text-3xl sm:text-4xl font-bold">OPods</p>

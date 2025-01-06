@@ -68,6 +68,7 @@ export default function ShopCardContainer() {
           onClick={() => {
             setAnimation((pv) => pv - 1);
           }}
+          aria-label="Previous button, click to see the other advantages"
           className={`w-10 h-10 mt-auto flex justify-center items-center text-xl text-grey ${
             animation === 0 ? "opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto"
           } bg-opacity-35 bg-light-grey hover:bg-opacity-50 hover:bg-lighter-grey transition-all rounded-full`}
@@ -78,6 +79,7 @@ export default function ShopCardContainer() {
           onClick={() => {
             setAnimation((pv) => pv + 1);
           }}
+          aria-label="Next button, click to see the other advantages"
           className={`w-10 h-10 mt-auto flex justify-center items-center text-xl text-grey ${
             animation === maxSteps ? "opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto"
           } bg-opacity-35 bg-light-grey hover:bg-opacity-50 hover:bg-lighter-grey transition-all rounded-full`}
