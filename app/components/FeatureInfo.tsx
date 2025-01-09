@@ -31,7 +31,7 @@ export default function FeatureInfo({
   const scope = useInfoAnimation(isOpen);
 
   return (
-    <div ref={scope} className="w-full h-screen p-4 bg-pure-white flex flex-col lg:flex-row justify-between fixed top-0 right-0 z-50 translate-x-[100%]">
+    <div ref={scope} className="w-full h-svh p-4 bg-pure-white flex flex-col lg:flex-row justify-between fixed top-0 right-0 z-50 translate-x-[100%]">
       <ul className="lg:w-[50%] p-4 xs:p-10 flex flex-col gap-10 text-foreground">
         <li
           onClick={() => setIsOpen((prev) => !prev)}
