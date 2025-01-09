@@ -39,6 +39,7 @@ export default {
         "inner-3xl": "inset 0px -206px 70px -25px rgba(0, 0, 0, 0.25)",
         "outer-xl": "0px 0px 15px 2.5px rgba(0,0,0,0.4)",
         "outer-lg": "0px 0px 10px 1px rgba(0,0,0,0.15)",
+        "outer-2xl": "0px 0px 15px 1px rgba(0,0,0,0.2)",
       },
       animation: {
         blink: "blink 0.75s ease-in-out infinite alternate",

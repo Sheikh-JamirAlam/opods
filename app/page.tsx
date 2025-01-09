@@ -3,7 +3,7 @@ import OpodsAnimation from "./components/OpodsAnimation";
 import CarouselContainer from "./components/CarouselContainer";
 import CaseContainer from "./components/CaseContainer";
 import ColorContainer from "./components/ColorContainer";
-import Carousel from "./components/Carousel";
+import CaseFeatureContainer from "./components/CaseFeatureContainer";
 import Feature from "./components/Feature";
 import AnimateFeature from "./components/AnimateFeature";
 import ScreenContainer from "./components/ScreenContainer";
@@ -60,10 +60,7 @@ export default function Home() {
             Power for hours with a smaller, more capable case.
             <span className="text-dark-grey"> The streamlined charging case is more than 10% smaller by volume than the previous generation, with no sacrifice to charging times.</span>
           </p>
-          <div className="lg:w-[53rem] flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-5 lg:gap-0">
-            <Carousel imgUrl="url('/images/Cord.jpg')" imgText="Easy as USB-C" width="26rem" height="26rem" section="charge" />
-            <Carousel imgUrl="url('/images/Charger.jpg')" imgText="New wireless option" width="26rem" height="26rem" section="charge" />
-          </div>
+          <CaseFeatureContainer />
         </section>
         <section id="specs" className="px-6 md:px-20 xl:px-48 py-12 pb-24 flex flex-col lg:flex-row justify-between">
           <div className="lg:w-[36%] relative">
