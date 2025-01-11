@@ -5,7 +5,7 @@ import { Plus } from "./Icons";
 interface PropType {
   imgUrl: string;
   imgText: string;
-  imgDesc?: string;
+  imgDesc: string;
   width: string;
   height: string;
   onClickedMore: (title: string, desc: string, imgUrl: string) => void;
@@ -23,7 +23,7 @@ export default function Carousel(props: PropType) {
       <div className="px-6 py-8 flex justify-between items-center opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
         <p className="w-[64%] md:w-[58%] lg:w-60 text-lg md:text-2xl lg:text-3xl text-white font-medium pointer-events-none">{props.imgText}</p>
         <div
-          onClick={() => props.onClickedMore(props.imgText, props.imgDesc!, props.imgUrl)}
+          onClick={() => props.onClickedMore(props.imgText, props.imgDesc, props.imgUrl)}
           className="w-16 md:w-20 lg:w-24 h-8 md:h-11 text-xs md:text-base rounded-full font-medium bg-white text-black flex justify-center items-center cursor-pointer group/button"
         >
           More <Plus className="text-base md:text-lg transition-all duration-300 group-hover/button:rotate-90" />

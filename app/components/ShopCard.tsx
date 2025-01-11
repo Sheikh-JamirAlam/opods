@@ -1,3 +1,5 @@
+"use client";
+
 import { SVGProps } from "react";
 import { Plus } from "./Icons";
 
@@ -5,6 +7,8 @@ interface PropType {
   text: string;
   desc: string;
   Icon: React.FC<SVGProps<SVGSVGElement>>;
+  info: string;
+  onClickedMore: (title: string, desc: string) => void;
 }
 
 export default function ShopCard(props: PropType) {
@@ -14,7 +18,10 @@ export default function ShopCard(props: PropType) {
         <props.Icon className="text-3xl md:text-6xl" />
         <h1 className="text-lg md:text-3xl font-medium">{props.text}</h1>
         <p className="text-xs md:text-base text-dark-grey">{props.desc}</p>
-        <div className="w-6 h-6 md:w-10 md:h-10 ml-auto flex items-center justify-center rounded-full text-base md:text-3xl text-white bg-black cursor-pointer group">
+        <div
+          onClick={() => props.onClickedMore(props.text, props.info)}
+          className="w-6 h-6 md:w-10 md:h-10 ml-auto flex items-center justify-center rounded-full text-base md:text-3xl text-white bg-black cursor-pointer group"
+        >
           <Plus className="transition-all duration-300 group-hover:rotate-90" />
         </div>
       </div>
