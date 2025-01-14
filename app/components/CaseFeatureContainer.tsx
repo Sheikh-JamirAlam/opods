@@ -33,7 +33,7 @@ export default function CaseFeatureContainer() {
         height="26rem"
         section="charge"
       />
-      {isOpen && <div className="w-screen h-screen fixed top-0 right-0 bg-black/30"></div>}
+      {isOpen && <div className="w-screen h-screen fixed top-0 right-0 bg-black/30 z-50"></div>}
       <FeatureInfo isOpen={isOpen} setIsOpen={setIsOpen} featureTexts={featureTexts} />
     </div>
   );
